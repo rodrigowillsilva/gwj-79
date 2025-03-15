@@ -13,3 +13,7 @@ config_version=5
 config/name="GWJ-79"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://Audio-Visual/icon.svg"
+
+[autoload]
+
+CommunicationBus="*res://Scenes/Managers/communication_bus.tscn"
