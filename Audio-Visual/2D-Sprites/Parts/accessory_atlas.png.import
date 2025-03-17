@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cskx5gkqji0u4"
-path.s3tc="res://.godot/imported/head.png-f7849158f9bf0b35d4de36ebdb95214c.s3tc.ctex"
+uid="uid://dwwnfodarjdva"
+path.s3tc="res://.godot/imported/accessory_atlas.png-098796942519d9992520908d5d90a742.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Audio-Visual/2D-Sprites/Parts/head.png"
-dest_files=["res://.godot/imported/head.png-f7849158f9bf0b35d4de36ebdb95214c.s3tc.ctex"]
+source_file="res://Audio-Visual/2D-Sprites/Parts/accessory_atlas.png"
+dest_files=["res://.godot/imported/accessory_atlas.png-098796942519d9992520908d5d90a742.s3tc.ctex"]
 
 [params]
 
