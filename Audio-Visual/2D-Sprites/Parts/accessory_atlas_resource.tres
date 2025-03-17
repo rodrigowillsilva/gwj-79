@@ -4,4 +4,4 @@
 
 [resource]
 atlas = ExtResource("1_xpv8v")
-region = Rect2(0, 0, 512, 512)
+region = Rect2(512, 0, 512, 512)
