@@ -3,7 +3,6 @@ extends Node
 
 class_name RequestGenerator
 
-
 @export var title: String = "Request Title"
 @export var description: String = "Request Description"
 @export var squirrel_text_line: String = "Squirrel Voice Line"
