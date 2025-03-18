@@ -7,9 +7,10 @@ enum KingdomResourceTypes {
 	TreeHeight
 }
 
-enum RequestGroup {
-	RequestNormal,
-	RequestTest
+enum RequestPool {
+	Early,
+	Late,
+	All
 }
 
 enum EntityTypes {

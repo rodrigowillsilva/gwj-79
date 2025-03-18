@@ -21,7 +21,7 @@ class_name RequestGenerator
 @export var denied_population_cost: int = 0
 @export var denied_loyalty_cost: int = 0
 @export var denied_tree_height_cost: int = 0
-@export var group: String = "RequestNormal"
+@export var pool: EnumsClassesConsts.RequestPool = EnumsClassesConsts.RequestPool.All
 
 @export_tool_button("Create Request", "Callable") var create_request_button = create_request
 func create_request():
@@ -29,17 +29,23 @@ func create_request():
 	var request_resource = Request.new({
 		"request_title": title,
 		"request_description": description,
-		"squirrel_voice_line": squirrel_text_line,
-        "decision_approved_description": approved_consequence_text,
-        "decision_denied_description": denied_consequence_text,
-        "decision_approved_squirrel_voice_line": decision_approved_text,
-        "decision_denied_squirrel_voice_line": decision_denied_text,
-        "acorn_cost": approved_acorn_cost,
-        "population_cost": approved_population_cost,
-        "loyalty_cost": approved_loyalty_cost,
-        "tree_height_cost": approved_tree_height_cost,
-        "group": group
-    }
+		"squirrel_text_line": squirrel_text_line,
+		"decision_approve_title": decision_approve_title,
+		"decision_deny_title": decision_deny_title,
+		"decision_approved_text": decision_approved_text,
+		"decision_denied_text": decision_denied_text,
+		"approved_acorn_cost": approved_acorn_cost,
+		"approved_consequence_text": approved_consequence_text,
+		"approved_population_cost": approved_population_cost,
+		"approved_loyalty_cost": approved_loyalty_cost,
+		"approved_tree_height_cost": approved_tree_height_cost,
+		"denied_acorn_cost": denied_acorn_cost,
+		"denied_consequence_text": denied_consequence_text,
+		"denied_population_cost": denied_population_cost,
+		"denied_loyalty_cost": denied_loyalty_cost,
+		"denied_tree_height_cost": denied_tree_height_cost,
+		"pool": pool
+	}
 	)
 
 	# Folder path where requests are saved

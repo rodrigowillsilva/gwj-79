@@ -4,4 +4,9 @@
 
 [node name="RequestGenerator" type="Node"]
 script = ExtResource("1_xr4c0")
+title = "Request Titleasdas"
+squirrel_text_line = "Squirrel Voice Lineasdas"
+decision_deny_title = "Deny Titleasdasd"
+decision_denied_text = "Denied Squirrel Voice Lineasdad"
+pool = null
 metadata/_custom_type_script = "uid://jqieeumd01r6"
