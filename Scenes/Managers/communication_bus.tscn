@@ -1,6 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://dq18uixh0103"]
+[gd_scene load_steps=2 format=3 uid="uid://q5bgw3d5m2ak"]
 
-[ext_resource type="Script" uid="uid://isupkoqa8usl" path="res://Scripts/Managers/communication_bus.gd" id="1_hbeh4"]
+[ext_resource type="Script" uid="uid://isupkoqa8usl" path="res://Scripts/Global Managers/communication_bus.gd" id="1_hbeh4"]
 
 [node name="Communication Bus" type="Node"]
 script = ExtResource("1_hbeh4")

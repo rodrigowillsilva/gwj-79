@@ -1,0 +1,148 @@
+[gd_scene load_steps=18 format=3 uid="uid://dh8f3l5i6d5mg"]
+
+[ext_resource type="PackedScene" uid="uid://miq2xyyis8r6" path="res://Scenes/Managers/level_manager.tscn" id="1_q2fht"]
+[ext_resource type="PackedScene" uid="uid://cyi6nxre0iaro" path="res://Scenes/UI/main_ui.tscn" id="2_ikcpc"]
+[ext_resource type="Script" uid="uid://dn6ak1evrbuy7" path="res://Scripts/Entities/entity.gd" id="3_5erdv"]
+
+[sub_resource type="Gradient" id="Gradient_ikcpc"]
+offsets = PackedFloat32Array(1)
+colors = PackedColorArray(1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_5erdv"]
+gradient = SubResource("Gradient_ikcpc")
+width = 48
+
+[sub_resource type="Gradient" id="Gradient_5erdv"]
+offsets = PackedFloat32Array(1)
+colors = PackedColorArray(1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_qbrl8"]
+gradient = SubResource("Gradient_5erdv")
+width = 24
+height = 36
+
+[sub_resource type="Animation" id="Animation_5erdv"]
+resource_name = "walk_to_the_king"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(2.70112, 0.314186, -1.69667), Vector3(0.586, 0.314, -1.697)]
+}
+
+[sub_resource type="Animation" id="Animation_qbrl8"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(2.70112, 0.314186, -1.69667)]
+}
+
+[sub_resource type="Animation" id="Animation_a2ia3"]
+resource_name = "wal_away_from_the_king"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(2),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-4.104, 0.314, -1.697)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qbrl8"]
+_data = {
+&"RESET": SubResource("Animation_qbrl8"),
+&"wal_away_from_the_king": SubResource("Animation_a2ia3"),
+&"walk_to_the_king": SubResource("Animation_5erdv")
+}
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qbrl8"]
+albedo_color = Color(0.36, 0.26328, 0.1368, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_a2ia3"]
+material = SubResource("StandardMaterial3D_qbrl8")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_236hc"]
+albedo_color = Color(0.36, 0.26328, 0.1368, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_lwkuy"]
+material = SubResource("StandardMaterial3D_236hc")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tqiex"]
+albedo_color = Color(0.53, 0.369233, 0.159, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_ha3dl"]
+material = SubResource("StandardMaterial3D_tqiex")
+
+[node name="Main level" type="Node3D"]
+
+[node name="Main UI" parent="." instance=ExtResource("2_ikcpc")]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -0.00875568, 0.927141, -3.05881)
+
+[node name="Level Manager" parent="." instance=ExtResource("1_q2fht")]
+
+[node name="Entities" parent="Level Manager" index="3" node_paths=PackedStringArray("_entities")]
+_entities = {
+"King": NodePath("../../Entities/King"),
+"Requestor": NodePath("../../Entities/Requestor")
+}
+
+[node name="Entities" type="Node3D" parent="."]
+
+[node name="King" type="Sprite3D" parent="Entities"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.08084, -0.945434)
+texture = SubResource("GradientTexture2D_5erdv")
+script = ExtResource("3_5erdv")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Entities/King"]
+root_node = NodePath("../../..")
+
+[node name="Requestor" type="Sprite3D" parent="Entities"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.70112, 0.314186, -1.69667)
+texture = SubResource("GradientTexture2D_qbrl8")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Entities/Requestor"]
+libraries = {
+&"": SubResource("AnimationLibrary_qbrl8")
+}
+autoplay = "walk_to_the_king"
+
+[node name="Terrain" type="Node3D" parent="."]
+
+[node name="Wall1" type="MeshInstance3D" parent="Terrain"]
+transform = Transform3D(61.5684, 0, 0, 0, 13.2729, 0, 0, 0, 1, 0, 0, 0)
+mesh = SubResource("BoxMesh_a2ia3")
+
+[node name="Floor" type="MeshInstance3D" parent="Terrain"]
+transform = Transform3D(11.8623, 0, 0, 0, 1, 0, 0, 0, 17.6948, 0, 0, 0)
+mesh = SubResource("PlaneMesh_lwkuy")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Terrain"]
+transform = Transform3D(0.999995, -0.00310668, 0, 0.00310668, 0.999995, 0, 0, 0, 1, 0, 0.36651, -0.539445)
+mesh = SubResource("BoxMesh_ha3dl")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -0.621558, 0.783368, 0, -0.783368, -0.621558, 0, 8.70708, -13.7411)
+
+[editable path="Level Manager"]

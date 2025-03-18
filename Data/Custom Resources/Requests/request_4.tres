@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="Request" load_steps=2 format=3 uid="uid://2yl251slpvqh"]
+
+[ext_resource type="Script" uid="uid://cu8y4lhboi3w7" path="res://Data/Custom Resources/Requests/base_resource.gd" id="1_k2n4v"]
+
+[resource]
+script = ExtResource("1_k2n4v")
+title = "Request Titleasdas"
+description = "Request Description"
+squirrel_text_line = ""
+decision_approve_title = ""
+decision_deny_title = ""
+decision_approved_text = ""
+decision_denied_text = ""
+approved_acorn_cost = 0
+approved_consequence_text = ""
+approved_population_cost = 0
+approved_loyalty_cost = 0
+approved_tree_height_cost = 0
+denied_acorn_cost = 0
+denied_consequence_text = ""
+denied_population_cost = 0
+denied_loyalty_cost = 0
+denied_tree_height_cost = 0
+pool = ""

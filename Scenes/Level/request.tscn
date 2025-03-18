@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cvb20tpbgf2d2"]
+
+[ext_resource type="Script" uid="uid://bjpdi162acfkh" path="res://Scripts/Level/request.gd" id="1_rmiir"]
+
+[node name="Request" type="Node"]
+script = ExtResource("1_rmiir")

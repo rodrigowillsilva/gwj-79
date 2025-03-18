@@ -1,0 +1,23 @@
+[gd_scene load_steps=6 format=3 uid="uid://miq2xyyis8r6"]
+
+[ext_resource type="Script" uid="uid://bn7h6h1n5424w" path="res://Scripts/Level/level_manager.gd" id="1_7cdqo"]
+[ext_resource type="PackedScene" uid="uid://cpjb7x1jnigal" path="res://Scenes/Level/resources.tscn" id="2_5amh6"]
+[ext_resource type="PackedScene" uid="uid://cvb20tpbgf2d2" path="res://Scenes/Level/request.tscn" id="3_ujoj8"]
+[ext_resource type="PackedScene" uid="uid://8ldy8kufisiu" path="res://Scenes/Level/decision.tscn" id="4_e1bxh"]
+[ext_resource type="PackedScene" uid="uid://cfrfq08j3t5f0" path="res://Scenes/Level/entities.tscn" id="5_expxj"]
+
+[node name="Level Manager" type="Node"]
+script = ExtResource("1_7cdqo")
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="Resources" parent="." instance=ExtResource("2_5amh6")]
+
+[node name="Request" parent="." instance=ExtResource("3_ujoj8")]
+
+[node name="Entities" parent="." instance=ExtResource("5_expxj")]
+
+[node name="Decision" parent="." instance=ExtResource("4_e1bxh")]
+
+[node name="Timer" type="Timer" parent="Decision"]
+one_shot = true

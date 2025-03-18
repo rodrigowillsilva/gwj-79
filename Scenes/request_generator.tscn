@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://cx3pejkdi4vhv"]
+
+[ext_resource type="Script" uid="uid://jqieeumd01r6" path="res://Data/Custom Resources/request_generator.gd" id="1_xr4c0"]
+
+[node name="RequestGenerator" type="Node"]
+script = ExtResource("1_xr4c0")
+metadata/_custom_type_script = "uid://jqieeumd01r6"

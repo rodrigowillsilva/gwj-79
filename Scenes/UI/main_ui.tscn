@@ -1,0 +1,36 @@
+[gd_scene load_steps=6 format=3 uid="uid://cyi6nxre0iaro"]
+
+[ext_resource type="Script" uid="uid://ccvi3ydjumumv" path="res://Scripts/UI/main_ui.gd" id="1_12m5l"]
+[ext_resource type="PackedScene" uid="uid://by8jfmsxifh5a" path="res://Scenes/UI/decision_ui.tscn" id="1_mcebo"]
+[ext_resource type="PackedScene" uid="uid://bd7rcch2j8dia" path="res://Scenes/UI/resources_ui.tscn" id="3_nqiow"]
+[ext_resource type="Script" uid="uid://bedavruyrw845" path="res://Scripts/UI/resources_ui.gd" id="4_hy7uo"]
+[ext_resource type="Script" uid="uid://jqieeumd01r6" path="res://Data/Custom Resources/request_generator.gd" id="5_nqiow"]
+
+[node name="Main UI" type="CanvasLayer"]
+script = ExtResource("1_12m5l")
+
+[node name="Decision UI" parent="." instance=ExtResource("1_mcebo")]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Resources UI" parent="." instance=ExtResource("3_nqiow")]
+script = ExtResource("4_hy7uo")
+
+[node name="Node" type="Node" parent="."]
+script = ExtResource("5_nqiow")
+title = "New Requestsdfdsf"
+description = "dsffse request"
+squirrel_voice_line = "sdf something!"
+decision_approved_description = "Thesdfas approved"
+decision_denied_description = "sdf denied"
+decision_approved_squirrel_voice_line = "sdfu!"
+decision_denied_squirrel_voice_line = "sdf"
+acorn_cost = 10
+population_cost = 12
+loyalty_cost = 33
+tree_height_cost = 4

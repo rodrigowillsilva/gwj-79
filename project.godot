@@ -17,3 +17,5 @@ config/icon="res://Audio-Visual/icon.svg"
 [autoload]
 
 CommunicationBus="*res://Scenes/Managers/communication_bus.tscn"
+GameManager="*res://Scenes/Global Managers/game_manager.tscn"
+EnumsClassesConsts="*res://Scripts/Global Managers/enums_classes_consts.gd"

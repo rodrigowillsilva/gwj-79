@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://8ldy8kufisiu"]
+
+[ext_resource type="Script" uid="uid://cja5y3k3mdaqq" path="res://Scripts/Level/decision.gd" id="1_wcoj1"]
+
+[node name="Decision" type="Node"]
+script = ExtResource("1_wcoj1")
