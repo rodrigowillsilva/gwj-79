@@ -1,0 +1,19 @@
+[gd_resource type="Environment" load_steps=2 format=3 uid="uid://driky51m3yd5y"]
+
+[ext_resource type="Sky" uid="uid://byykfyfpv7rgr" path="res://Audio-Visual/Environmental/sky_morning.tres" id="1_erq13"]
+
+[resource]
+background_mode = 2
+background_energy_multiplier = 1.36
+sky = ExtResource("1_erq13")
+ambient_light_source = 1
+ambient_light_color = Color(0.513233, 0.513233, 0.513233, 1)
+reflected_light_source = 2
+tonemap_mode = 3
+ssr_fade_in = 0.3
+ssao_enabled = true
+ssao_radius = 2.3
+ssao_intensity = 1.16
+ssao_power = 1.5529
+ssao_horizon = 0.15
+ssil_radius = 6.6

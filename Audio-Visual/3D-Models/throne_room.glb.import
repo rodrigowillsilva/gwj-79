@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://baiwg6obgay4t"
-path="res://.godot/imported/throne room graybox.glb-c68b1b87e105a4b1e108abd259aa95ef.scn"
+uid="uid://dhg3xav8c04rj"
+path="res://.godot/imported/throne_room.glb-ed9773d996d8ac94a53e798c608365d3.scn"
 
 [deps]
 
-source_file="res://Audio-Visual/3D-Models/throne room graybox.glb"
-dest_files=["res://.godot/imported/throne room graybox.glb-c68b1b87e105a4b1e108abd259aa95ef.scn"]
+source_file="res://Audio-Visual/3D-Models/throne_room.glb"
+dest_files=["res://.godot/imported/throne_room.glb-ed9773d996d8ac94a53e798c608365d3.scn"]
 
 [params]
 

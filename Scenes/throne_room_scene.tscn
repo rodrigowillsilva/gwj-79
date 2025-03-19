@@ -1,33 +1,26 @@
-[gd_scene load_steps=5 format=3 uid="uid://d11gwibaolypf"]
+[gd_scene load_steps=4 format=3 uid="uid://d11gwibaolypf"]
 
-[ext_resource type="PackedScene" uid="uid://baiwg6obgay4t" path="res://Audio-Visual/3D-Models/throne room graybox.glb" id="1_8wnck"]
-[ext_resource type="Texture2D" uid="uid://o4uj4yfebqi3" path="res://Audio-Visual/2D-Sprites/placeholdersquirrel.png" id="2_usohd"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bbvqu"]
-albedo_color = Color(0.430885, 0.31467, 0.187831, 1)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dp8g5"]
-albedo_color = Color(0.874226, 0.732065, 0.556347, 1)
+[ext_resource type="PackedScene" uid="uid://dhg3xav8c04rj" path="res://Audio-Visual/3D-Models/throne_room.glb" id="1_usohd"]
+[ext_resource type="PackedScene" uid="uid://qj8cqs7ejq27" path="res://Scenes/squirrel.tscn" id="2_bbvqu"]
+[ext_resource type="Environment" uid="uid://driky51m3yd5y" path="res://Audio-Visual/Environmental/throne_room_a.tres" id="3_dp8g5"]
 
 [node name="ThroneRoomScene" type="Node3D"]
 
-[node name="throne room graybox" parent="." instance=ExtResource("1_8wnck")]
-
-[node name="tree" parent="throne room graybox" index="0"]
-material_override = SubResource("StandardMaterial3D_bbvqu")
-
-[node name="Throne" parent="throne room graybox" index="1"]
-material_override = SubResource("StandardMaterial3D_dp8g5")
-
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 20.9345, 4.95108, 0)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 23.6782, 21.8608)
+visible = false
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 16.2437, 1.98307, 0)
-fov = 14.2
+transform = Transform3D(1, 0, 0, 0, 0.986549, 0.163464, 0, -0.163464, 0.986549, 0, 23.6782, 19.8267)
+fov = 25.0
 
-[node name="King" type="Sprite3D" parent="."]
-transform = Transform3D(-6.03524e-09, 0, -1, 0, 0.13807, 0, 0.13807, 0, -4.37114e-08, -6.67339, 2.0711, 0)
-texture = ExtResource("2_usohd")
+[node name="throne_room" parent="." instance=ExtResource("1_usohd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -86.7301, 0)
 
-[editable path="throne room graybox"]
+[node name="Characters" type="Node3D" parent="."]
+
+[node name="King" parent="Characters" instance=ExtResource("2_bbvqu")]
+transform = Transform3D(0.255, 0, 0, 0, 0.255, 0, 0, 0, 0.255, 0, 17.2622, -8.81662)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = ExtResource("3_dp8g5")
