@@ -1,0 +1,22 @@
+[gd_resource type="Theme" load_steps=4 format=3 uid="uid://2ug8lotrmc34"]
+
+[ext_resource type="StyleBox" uid="uid://pyk0je26hwqo" path="res://Audio-Visual/UI/UI_Main_Menu_Buttons_Style.tres" id="1_hcev3"]
+[ext_resource type="FontFile" uid="uid://b4nfvqno2plxf" path="res://Audio-Visual/UI/Fonts/Kingthings_Foundation.ttf" id="2_f2hfj"]
+[ext_resource type="FontFile" uid="uid://bs7k4n3ikt7bb" path="res://Audio-Visual/UI/Fonts/ArimaKoshi-ExtraBold.otf" id="2_hp2ml"]
+
+[resource]
+default_font = ExtResource("2_hp2ml")
+Button/colors/font_color = Color(0.91, 0.848575, 0.1729, 1)
+Button/colors/font_focus_color = Color(0.975911, 0.930934, 0.461512, 1)
+Button/font_sizes/font_size = 48
+Button/styles/disabled = ExtResource("1_hcev3")
+Button/styles/focus = ExtResource("1_hcev3")
+Button/styles/hover = ExtResource("1_hcev3")
+Button/styles/normal = ExtResource("1_hcev3")
+Button/styles/pressed = ExtResource("1_hcev3")
+Label/colors/font_color = Color(0.91, 0.848575, 0.1729, 1)
+Label/colors/font_outline_color = Color(1, 1, 1, 1)
+Label/colors/font_shadow_color = Color(0.1452, 0.191327, 0.22, 0.756863)
+Label/font_sizes/font_size = 120
+Label/fonts/font = ExtResource("2_f2hfj")
+VBoxContainer/constants/separation = 50

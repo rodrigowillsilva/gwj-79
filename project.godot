@@ -11,12 +11,18 @@ config_version=5
 [application]
 
 config/name="GWJ-79"
+run/main_scene="uid://bk0n0ipn3j50k"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://Audio-Visual/icon.svg"
 
 [autoload]
 
 CommunicationBus="*res://Scenes/Managers/communication_bus.tscn"
+
+[display]
+
+window/size/viewport_width=1920
+window/size/viewport_height=1080
 
 [rendering]
 
