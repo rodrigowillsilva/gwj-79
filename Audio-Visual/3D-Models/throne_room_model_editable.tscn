@@ -1,0 +1,17 @@
+[gd_scene load_steps=5 format=3 uid="uid://chcvofc32mjqs"]
+
+[ext_resource type="PackedScene" uid="uid://dsg2jxlwvnyua" path="res://Audio-Visual/3D-Models/throne_room_model.glb" id="1_ky10r"]
+[ext_resource type="Material" uid="uid://d3wpillmbx5ke" path="res://Audio-Visual/Shaders/tree_material.tres" id="2_mg7dg"]
+[ext_resource type="Material" uid="uid://6csphl7k63hb" path="res://Audio-Visual/Shaders/throne_main_material.tres" id="3_awox2"]
+[ext_resource type="Material" uid="uid://b4kxwr4h62rww" path="res://Audio-Visual/Shaders/throne_side_material.tres" id="4_m0j5u"]
+
+[node name="throne_room_model" instance=ExtResource("1_ky10r")]
+
+[node name="Tree" parent="." index="0"]
+material_override = ExtResource("2_mg7dg")
+
+[node name="Throne-main" parent="." index="1"]
+material_override = ExtResource("3_awox2")
+
+[node name="Throne-sides" parent="." index="2"]
+material_override = ExtResource("4_m0j5u")

@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="Squirrel_Appearance" load_steps=3 format=3 uid="uid://dt26vo7e2qu66"]
+
+[ext_resource type="Resource" uid="uid://dyikurr4lvi0" path="res://Audio-Visual/Character-Appearances/Squirrel-Bases/brown_squirrel.tres" id="1_5bqgg"]
+[ext_resource type="Script" uid="uid://c65xyrrpoxeqv" path="res://Scripts/Custom-Resources/squirrel_appearance.gd" id="1_sjyld"]
+
+[resource]
+script = ExtResource("1_sjyld")
+base = ExtResource("1_5bqgg")
+body_size = 1.207
+eye_texture = 4
+eye_size = 1.331
+eye_offset = Vector2(-7.575, -7.225)
+eyebrow_texture = 4
+eyebrow_size = 1.332
+eyebrow_offset = Vector2(0, -32.475)
+hat_texture = 3
+hat_offset = Vector2(9.395, -2.825)
+accessory_texture = 7
+accessory_offset = Vector2(0, 0)
+held_r_texture = 6
+object_r_offset = Vector2(32.505, -112.49)
+held_l_texture = 15
+object_l_offset = Vector2(0, 0)
+save_name = "MagicSquirrelTheFourth"
+metadata/_custom_type_script = "uid://c65xyrrpoxeqv"

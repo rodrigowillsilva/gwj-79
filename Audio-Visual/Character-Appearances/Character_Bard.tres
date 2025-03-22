@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="Squirrel_Appearance" load_steps=3 format=3 uid="uid://d2gcuoga0433o"]
+
+[ext_resource type="Resource" uid="uid://cmeo348dja6dr" path="res://Audio-Visual/Character-Appearances/Squirrel-Bases/red_squirrel.tres" id="1_5jq1j"]
+[ext_resource type="Script" uid="uid://c65xyrrpoxeqv" path="res://Scripts/Custom-Resources/squirrel_appearance.gd" id="2_23kwb"]
+
+[resource]
+script = ExtResource("2_23kwb")
+base = ExtResource("1_5jq1j")
+body_size = 1.0
+eye_texture = 7
+eye_size = 2.0
+eye_offset = Vector2(15.585, -1.875)
+eyebrow_texture = 3
+eyebrow_size = 1.029
+eyebrow_offset = Vector2(1.25, -10.795)
+hat_texture = 5
+hat_offset = Vector2(-9.98, 7.66)
+accessory_texture = 6
+accessory_offset = Vector2(-14.825, -109.65)
+held_r_texture = 14
+object_r_offset = Vector2(26.07, -136)
+held_l_texture = 5
+object_l_offset = Vector2(-24.905, -82.47)
+save_name = "Character_Bard"
+metadata/_custom_type_script = "uid://c65xyrrpoxeqv"

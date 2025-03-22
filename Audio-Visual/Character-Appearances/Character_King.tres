@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="Squirrel_Appearance" load_steps=3 format=3 uid="uid://t14rycpb0p1m"]
+
+[ext_resource type="Script" uid="uid://c65xyrrpoxeqv" path="res://Scripts/Custom-Resources/squirrel_appearance.gd" id="1_0ixn8"]
+[ext_resource type="Resource" uid="uid://cmeo348dja6dr" path="res://Audio-Visual/Character-Appearances/Squirrel-Bases/red_squirrel.tres" id="1_jterb"]
+
+[resource]
+script = ExtResource("1_0ixn8")
+base = ExtResource("1_jterb")
+body_size = 1.0
+eye_texture = 0
+eye_size = 1.0
+eye_offset = Vector2(-5.085, -9.28)
+eyebrow_texture = 6
+eyebrow_size = 1.0
+eyebrow_offset = Vector2(-0.075, 14.11)
+hat_texture = 0
+hat_offset = Vector2(-14.74, 54.6)
+accessory_texture = 5
+accessory_offset = Vector2(-10.32, -119.815)
+held_r_texture = 3
+object_r_offset = Vector2(49.145, -90.86)
+held_l_texture = 15
+object_l_offset = Vector2(0, 0)
+save_name = "Character_King"
+metadata/_custom_type_script = "uid://c65xyrrpoxeqv"

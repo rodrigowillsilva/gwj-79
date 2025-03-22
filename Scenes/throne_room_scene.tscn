@@ -1,20 +1,32 @@
-[gd_scene load_steps=4 format=3 uid="uid://d11gwibaolypf"]
+[gd_scene load_steps=6 format=3 uid="uid://d11gwibaolypf"]
 
-[ext_resource type="PackedScene" uid="uid://dhg3xav8c04rj" path="res://Audio-Visual/3D-Models/throne_room.glb" id="1_usohd"]
+[ext_resource type="PackedScene" uid="uid://chcvofc32mjqs" path="res://Audio-Visual/3D-Models/throne_room_model_editable.tscn" id="1_bbvqu"]
+[ext_resource type="Script" uid="uid://c250wh4qp748p" path="res://Scripts/throne_room_scene_script.gd" id="1_dp8g5"]
 [ext_resource type="PackedScene" uid="uid://qj8cqs7ejq27" path="res://Scenes/squirrel.tscn" id="2_bbvqu"]
 [ext_resource type="Environment" uid="uid://driky51m3yd5y" path="res://Audio-Visual/Environmental/throne_room_a.tres" id="3_dp8g5"]
+[ext_resource type="Compositor" uid="uid://cqo7wmqi7aab7" path="res://Audio-Visual/Environmental/main_compositor.tres" id="4_dp8g5"]
 
 [node name="ThroneRoomScene" type="Node3D"]
+script = ExtResource("1_dp8g5")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 23.6782, 21.8608)
-visible = false
+transform = Transform3D(1, 0, 0, 0, 0.910885, 0.412659, 0, -0.412659, 0.910885, 0, 21.7911, 79.5199)
+light_color = Color(0.86, 0.825887, 0.7138, 1)
+light_energy = 1.6
+light_angular_distance = 2.29
+light_bake_mode = 1
+shadow_enabled = true
+shadow_opacity = 0.75
+shadow_blur = 2.392
+directional_shadow_mode = 0
+directional_shadow_fade_start = 0.62
+directional_shadow_max_distance = 129.9
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.986549, 0.163464, 0, -0.163464, 0.986549, 0, 23.6782, 19.8267)
 fov = 25.0
 
-[node name="throne_room" parent="." instance=ExtResource("1_usohd")]
+[node name="throne_room_model" parent="." instance=ExtResource("1_bbvqu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -86.7301, 0)
 
 [node name="Characters" type="Node3D" parent="."]
@@ -24,3 +36,4 @@ transform = Transform3D(0.255, 0, 0, 0, 0.255, 0, 0, 0, 0.255, 0, 17.2622, -8.81
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = ExtResource("3_dp8g5")
+compositor = ExtResource("4_dp8g5")

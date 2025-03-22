@@ -16,7 +16,7 @@ signal updated_name
 		body_size = val
 		_update_transforms()
 
-@export_enum ("Simple", "Beady", "Cartoony", "Creepy", "Oblivious", "Dead", "Closed", "Red") var eye_texture: int:
+@export_enum ("Simple", "Red", "Cartoony", "Creepy", "Oblivious", "Dead", "Closed", "Beady") var eye_texture: int:
 	set(val):
 		eye_texture = val
 		_update_sprites()
@@ -29,7 +29,7 @@ signal updated_name
 		eye_offset = val
 		_update_transforms()
 
-@export_enum ("Simple", "Bushy", "Extra Bushy", "Fine", "Cartoony", "Distinguished", "Rough", "None") var eyebrow_texture: int:
+@export_enum ("Simple", "Bushy", "Extra Bushy", "Fine", "Cartoony", "Rough", "Distinguished", "None") var eyebrow_texture: int:
 	set(val):
 		eyebrow_texture = val
 		_update_sprites()
@@ -47,8 +47,12 @@ signal updated_name
 	set(val):
 		hat_texture = val
 		_update_sprites()
+@export var hat_offset: Vector2 = Vector2.ZERO:
+	set(val):
+		hat_offset = val
+		_update_transforms()
 
-@export_enum ("Scarf", "Necktie", "Badge", "Belt", "Necklace", "Jabot", "Bow", "?", "NONE") var accessory_texture: int:
+@export_enum ("Scarf", "Necktie", "Badge", "Belt", "Necklace", "Jabot", "Bow", "NONE") var accessory_texture: int:
 	set(val):
 		accessory_texture = val
 		_update_sprites()
@@ -57,7 +61,7 @@ signal updated_name
 		accessory_offset = val
 		_update_transforms()
 
-@export_enum ("Sword", "Hammer", "Boquet", "Scepter", "Potion", "Scroll", "Sack","Quill", "Duster", "Cleaver", "Magic Wand", "Rag", "Acorn", "Basket", "?", "None") var held_r_texture: int:
+@export_enum ("Sword", "Hammer", "Boquet", "Royal Scepter", "Potion", "Scroll", "Sack","Quill", "Duster", "Cleaver", "Magic Wand", "Dagger", "Rag", "Candle", "Musical Instrument", "None") var held_r_texture: int:
 	set(val):
 		held_r_texture = val
 		_update_sprites()
@@ -65,7 +69,7 @@ signal updated_name
 	set(val):
 		object_r_offset = val
 		_update_transforms()
-@export_enum ("Sword", "Hammer", "Boquet", "Scepter", "Potion", "Scroll", "Sack","Quill", "Duster", "Cleaver", "Magic Wand", "Rag", "Acorn", "Basket", "?", "None") var held_l_texture: int:
+@export_enum ("Sword", "Hammer", "Boquet", "Royal Scepter", "Potion", "Scroll", "Sack","Quill", "Duster", "Cleaver", "Magic Wand", "Dagger", "Rag", "Candle", "Musical Instrument", "None") var held_l_texture: int:
 	set(val):
 		held_l_texture = val
 		_update_sprites()

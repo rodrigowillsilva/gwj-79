@@ -17,3 +17,7 @@ config/icon="res://Audio-Visual/icon.svg"
 [autoload]
 
 CommunicationBus="*res://Scenes/Managers/communication_bus.tscn"
+
+[rendering]
+
+anti_aliasing/quality/screen_space_aa=1

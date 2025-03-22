@@ -1,23 +1,29 @@
-[gd_resource type="Resource" script_class="Squirrel_Base_Textures" load_steps=10 format=3 uid="uid://cmeo348dja6dr"]
+[gd_resource type="Resource" script_class="Squirrel_Base_Textures" load_steps=13 format=3 uid="uid://cmeo348dja6dr"]
 
-[ext_resource type="Texture2D" uid="uid://di7icm5sp1hbq" path="res://Audio-Visual/2D-Sprites/Parts/arm-1.png" id="1_pgru1"]
+[ext_resource type="Texture2D" uid="uid://dt5p77ssbpwuf" path="res://Audio-Visual/2D-Sprites/Parts/squirrel-red/arm-1.png" id="1_psrwx"]
 [ext_resource type="Script" uid="uid://bj1qk4r25rsg3" path="res://Scripts/Custom-Resources/squirrel_base_textures.gd" id="1_yjg4i"]
-[ext_resource type="Texture2D" uid="uid://dyptbbq0uoccm" path="res://Audio-Visual/2D-Sprites/Parts/arm-2.png" id="2_uddu0"]
-[ext_resource type="Texture2D" uid="uid://dapv0iop4n4h0" path="res://Audio-Visual/2D-Sprites/Parts/body.png" id="3_xpeoc"]
-[ext_resource type="Texture2D" uid="uid://cjl7ur36qndkx" path="res://Audio-Visual/2D-Sprites/Parts/fluff.png" id="4_psrwx"]
-[ext_resource type="Texture2D" uid="uid://cqqur53l3g47e" path="res://Audio-Visual/2D-Sprites/Parts/hand.png" id="5_bys1o"]
-[ext_resource type="Texture2D" uid="uid://cskx5gkqji0u4" path="res://Audio-Visual/2D-Sprites/Parts/head.png" id="6_bcvh8"]
-[ext_resource type="Texture2D" uid="uid://chg1gqa2okmos" path="res://Audio-Visual/2D-Sprites/Parts/leg.png" id="7_08ma0"]
-[ext_resource type="Texture2D" uid="uid://dhu278jhlx8fr" path="res://Audio-Visual/2D-Sprites/Parts/tail.png" id="9_cflrw"]
+[ext_resource type="Texture2D" uid="uid://iwhrljhxr33o" path="res://Audio-Visual/2D-Sprites/Parts/squirrel-red/arm-2.png" id="2_bys1o"]
+[ext_resource type="Texture2D" uid="uid://c44bd8kbcag6c" path="res://Audio-Visual/2D-Sprites/Parts/squirrel-red/body.png" id="3_bcvh8"]
+[ext_resource type="Texture2D" uid="uid://dppdjspvksrcg" path="res://Audio-Visual/2D-Sprites/Parts/squirrel-red/body-back.png" id="4_08ma0"]
+[ext_resource type="Texture2D" uid="uid://dylqr7qhg235o" path="res://Audio-Visual/2D-Sprites/Parts/squirrel-red/fluff.png" id="5_cflrw"]
+[ext_resource type="Texture2D" uid="uid://bjgxfw122gcfw" path="res://Audio-Visual/2D-Sprites/Parts/squirrel-red/hand.png" id="6_amnuk"]
+[ext_resource type="Texture2D" uid="uid://dc3be6yecp86j" path="res://Audio-Visual/2D-Sprites/Parts/squirrel-red/head.png" id="7_f1p4h"]
+[ext_resource type="Texture2D" uid="uid://iqq1tex1dqjd" path="res://Audio-Visual/2D-Sprites/Parts/squirrel-red/head-back.png" id="8_fstky"]
+[ext_resource type="Texture2D" uid="uid://du4tg5dsjks1v" path="res://Audio-Visual/2D-Sprites/Parts/squirrel-red/leg.png" id="9_ptbdt"]
+[ext_resource type="Texture2D" uid="uid://bg8oaknhnamkw" path="res://Audio-Visual/2D-Sprites/Parts/squirrel-red/leg-back.png" id="10_f5m7a"]
+[ext_resource type="Texture2D" uid="uid://c08tl3cewfaok" path="res://Audio-Visual/2D-Sprites/Parts/squirrel-red/tail.png" id="12_mcjox"]
 
 [resource]
 script = ExtResource("1_yjg4i")
-body_texture = ExtResource("3_xpeoc")
-head_texture = ExtResource("6_bcvh8")
-fluff_texture = ExtResource("4_psrwx")
-arm_1_texture = ExtResource("1_pgru1")
-arm_2_texture = ExtResource("2_uddu0")
-hand_texture = ExtResource("5_bys1o")
-leg_texture = ExtResource("7_08ma0")
-tail_texture = ExtResource("9_cflrw")
+body_texture = ExtResource("3_bcvh8")
+body_texture_back = ExtResource("4_08ma0")
+head_texture = ExtResource("7_f1p4h")
+head_texture_back = ExtResource("8_fstky")
+fluff_texture = ExtResource("5_cflrw")
+arm_1_texture = ExtResource("1_psrwx")
+arm_2_texture = ExtResource("2_bys1o")
+hand_texture = ExtResource("6_amnuk")
+leg_texture = ExtResource("9_ptbdt")
+leg_texture_back = ExtResource("10_f5m7a")
+tail_texture = ExtResource("12_mcjox")
 metadata/_custom_type_script = "uid://bj1qk4r25rsg3"

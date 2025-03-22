@@ -1,0 +1,29 @@
+[gd_resource type="Resource" script_class="Squirrel_Base_Textures" load_steps=13 format=3 uid="uid://dyikurr4lvi0"]
+
+[ext_resource type="Texture2D" uid="uid://wogfifhxnmxw" path="res://Audio-Visual/2D-Sprites/Parts/squirrel-brown/arm-1.png" id="1_nbj7u"]
+[ext_resource type="Script" uid="uid://bj1qk4r25rsg3" path="res://Scripts/Custom-Resources/squirrel_base_textures.gd" id="1_niq2m"]
+[ext_resource type="Texture2D" uid="uid://cx22i36dhgb1m" path="res://Audio-Visual/2D-Sprites/Parts/squirrel-brown/arm-2.png" id="2_s5pbq"]
+[ext_resource type="Texture2D" uid="uid://bmirt7upqfw5f" path="res://Audio-Visual/2D-Sprites/Parts/squirrel-brown/body.png" id="3_4lapj"]
+[ext_resource type="Texture2D" uid="uid://c82s5irlh06xt" path="res://Audio-Visual/2D-Sprites/Parts/squirrel-brown/body-back.png" id="4_ha1ur"]
+[ext_resource type="Texture2D" uid="uid://b8x6tgyuyrkek" path="res://Audio-Visual/2D-Sprites/Parts/squirrel-brown/fluff.png" id="5_d13ik"]
+[ext_resource type="Texture2D" uid="uid://jp6rcl1sgjbi" path="res://Audio-Visual/2D-Sprites/Parts/squirrel-brown/hand.png" id="6_nq7ek"]
+[ext_resource type="Texture2D" uid="uid://ce6ijn43q7jnn" path="res://Audio-Visual/2D-Sprites/Parts/squirrel-brown/head.png" id="7_c2uuq"]
+[ext_resource type="Texture2D" uid="uid://btexrub85xip1" path="res://Audio-Visual/2D-Sprites/Parts/squirrel-brown/head-back.png" id="8_aa0jv"]
+[ext_resource type="Texture2D" uid="uid://c5wlems060ytx" path="res://Audio-Visual/2D-Sprites/Parts/squirrel-brown/leg.png" id="9_b2jva"]
+[ext_resource type="Texture2D" uid="uid://cbtiajw114eho" path="res://Audio-Visual/2D-Sprites/Parts/squirrel-brown/leg-back.png" id="10_bgohw"]
+[ext_resource type="Texture2D" uid="uid://w26mafrdotrl" path="res://Audio-Visual/2D-Sprites/Parts/squirrel-brown/tail.png" id="12_deujy"]
+
+[resource]
+script = ExtResource("1_niq2m")
+body_texture = ExtResource("3_4lapj")
+body_texture_back = ExtResource("4_ha1ur")
+head_texture = ExtResource("7_c2uuq")
+head_texture_back = ExtResource("8_aa0jv")
+fluff_texture = ExtResource("5_d13ik")
+arm_1_texture = ExtResource("1_nbj7u")
+arm_2_texture = ExtResource("2_s5pbq")
+hand_texture = ExtResource("6_nq7ek")
+leg_texture = ExtResource("9_b2jva")
+leg_texture_back = ExtResource("10_bgohw")
+tail_texture = ExtResource("12_deujy")
+metadata/_custom_type_script = "uid://bj1qk4r25rsg3"
