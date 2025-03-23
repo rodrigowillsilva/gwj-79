@@ -1,7 +1,84 @@
-[gd_scene format=3 uid="uid://bd7rcch2j8dia"]
+[gd_scene load_steps=3 format=3 uid="uid://bd7rcch2j8dia"]
+
+[ext_resource type="Texture2D" uid="uid://4e1g2iayiokw" path="res://Audio-Visual/icon.svg" id="1_7e0c7"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_8lm00"]
 
 [node name="Resources UI" type="Control"]
 layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Acorn" type="Control" parent="."]
 anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 65.0
+offset_top = 7.0
+offset_right = 105.0
+offset_bottom = 47.0
+
+[node name="Acorn Logo" type="TextureRect" parent="Acorn"]
+layout_mode = 0
+offset_right = 31.0
+offset_bottom = 30.0
+texture = ExtResource("1_7e0c7")
+expand_mode = 1
+
+[node name="Acorn Value" type="Label" parent="Acorn"]
+layout_mode = 0
+offset_left = 36.0
+offset_top = 6.0
+offset_right = 76.0
+offset_bottom = 29.0
+text = "0000"
+label_settings = SubResource("LabelSettings_8lm00")
+
+[node name="Population" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 194.0
+offset_top = 7.0
+offset_right = 234.0
+offset_bottom = 47.0
+
+[node name="Population Logo" type="TextureRect" parent="Population"]
+layout_mode = 0
+offset_right = 31.0
+offset_bottom = 30.0
+texture = ExtResource("1_7e0c7")
+expand_mode = 1
+
+[node name="Population Value" type="Label" parent="Population"]
+layout_mode = 0
+offset_left = 36.0
+offset_top = 6.0
+offset_right = 76.0
+offset_bottom = 29.0
+text = "0000"
+label_settings = SubResource("LabelSettings_8lm00")
+
+[node name="Loyalty" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 319.0
+offset_top = 7.0
+offset_right = 359.0
+offset_bottom = 47.0
+
+[node name="Loyalty Logo" type="TextureRect" parent="Loyalty"]
+layout_mode = 0
+offset_right = 31.0
+offset_bottom = 30.0
+texture = ExtResource("1_7e0c7")
+expand_mode = 1
+
+[node name="Loyalty Value" type="Label" parent="Loyalty"]
+layout_mode = 0
+offset_left = 36.0
+offset_top = 6.0
+offset_right = 76.0
+offset_bottom = 29.0
+text = "0000"
+label_settings = SubResource("LabelSettings_8lm00")
