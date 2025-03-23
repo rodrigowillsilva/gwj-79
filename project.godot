@@ -15,6 +15,10 @@ run/main_scene="uid://bk0n0ipn3j50k"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://Audio-Visual/icon.svg"
 
+[audio]
+
+buses/default_bus_layout="uid://iy1pmad4vfob"
+
 [autoload]
 
 CommunicationBus="*res://Scenes/Managers/communication_bus.tscn"
@@ -23,6 +27,10 @@ CommunicationBus="*res://Scenes/Managers/communication_bus.tscn"
 
 window/size/viewport_width=1920
 window/size/viewport_height=1080
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/anthonyec.camera_preview/plugin.cfg")
 
 [rendering]
 

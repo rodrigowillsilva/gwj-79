@@ -1,6 +1,7 @@
-[gd_scene load_steps=29 format=3 uid="uid://qj8cqs7ejq27"]
+[gd_scene load_steps=30 format=3 uid="uid://qj8cqs7ejq27"]
 
 [ext_resource type="Script" uid="uid://c5iaoafebywga" path="res://Scripts/Squirrel-Scene/squirrel_master_script.gd" id="1_1rkqu"]
+[ext_resource type="Texture2D" uid="uid://degqowgmxbmm0" path="res://Audio-Visual/2D-Sprites/raven.png" id="2_t24ju"]
 [ext_resource type="Script" uid="uid://dykrtdge2uyuv" path="res://Scripts/Squirrel-Scene/squirrel_sprite_script.gd" id="2_yns4c"]
 [ext_resource type="Resource" uid="uid://dt26vo7e2qu66" path="res://Audio-Visual/Character-Appearances/Character_Skibidi.tres" id="3_yns4c"]
 [ext_resource type="Texture2D" uid="uid://bmirt7upqfw5f" path="res://Audio-Visual/2D-Sprites/Parts/squirrel-brown/body.png" id="4_yns4c"]
@@ -104,6 +105,12 @@ _data = {
 
 [node name="Squirrel" type="Node3D"]
 script = ExtResource("1_1rkqu")
+
+[node name="RavenSprite" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2511, 0)
+visible = false
+shaded = true
+texture = ExtResource("2_t24ju")
 
 [node name="Sprite" type="Node3D" parent="."]
 script = ExtResource("2_yns4c")

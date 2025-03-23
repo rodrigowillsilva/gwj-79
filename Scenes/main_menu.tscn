@@ -1,19 +1,145 @@
-[gd_scene load_steps=14 format=3 uid="uid://bk0n0ipn3j50k"]
+[gd_scene load_steps=24 format=3 uid="uid://bk0n0ipn3j50k"]
 
 [ext_resource type="Theme" uid="uid://2ug8lotrmc34" path="res://Audio-Visual/UI/UI_Menu_Theme.tres" id="1_28flt"]
 [ext_resource type="Script" uid="uid://baekjwaurvboq" path="res://Scripts/main_menu_script.gd" id="2_48xlc"]
-[ext_resource type="Texture2D" uid="uid://bwhe6r1wregmn" path="res://Audio-Visual/UI/main_menu_bg.jpg" id="3_1ehe0"]
+[ext_resource type="Texture2D" uid="uid://cn7t03ywc5e1" path="res://Audio-Visual/UI/Main-Menu-BG/main menu bg.jpg" id="3_yhxw7"]
+[ext_resource type="Shader" uid="uid://bsqqpqr2msvlk" path="res://Audio-Visual/UI/Main-Menu-BG/cloudshader.tres" id="4_16hvj"]
 [ext_resource type="Script" uid="uid://dtqu6kebrsejs" path="res://Scripts/button_animator.gd" id="4_cp0ys"]
 [ext_resource type="Texture2D" uid="uid://bwprixnvikebx" path="res://Audio-Visual/UI/button_border.png" id="4_opfnp"]
+[ext_resource type="Texture2D" uid="uid://bhj11gurubm8f" path="res://Audio-Visual/UI/Main-Menu-BG/main menu cloud.jpg" id="4_trj04"]
 [ext_resource type="Shader" uid="uid://cmlaurnlxgsoh" path="res://Audio-Visual/UI/UI-Materials/main_menu_button_material.tres" id="5_cp0ys"]
+[ext_resource type="Shader" uid="uid://d0fwtpugtitou" path="res://Audio-Visual/UI/Main-Menu-BG/grasshader.tres" id="6_vr1f0"]
 [ext_resource type="Texture2D" uid="uid://bs6mghfmtim18" path="res://Audio-Visual/UI/Icons/acorn.png" id="6_yhxw7"]
+[ext_resource type="Texture2D" uid="uid://c5qmxdtdbrivl" path="res://Audio-Visual/UI/Main-Menu-BG/main menu grass.png" id="7_t1dhk"]
+[ext_resource type="Script" uid="uid://xk8y7vppk14c" path="res://Scripts/main_menu_music_player.gd" id="12_t1dhk"]
+[ext_resource type="AudioStream" uid="uid://rhmyk685fvkv" path="res://Audio-Visual/Sound-Effects/WAV/SFX-press-start.wav" id="13_5egv6"]
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ce3w2"]
-texture = ExtResource("3_1ehe0")
+[sub_resource type="Animation" id="Animation_t1dhk"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera2D:zoom")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Camera2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(176, 462)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("SubViewport/blackoutBG:color")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../SFX-Start")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.0333334),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [0.0],
+"method": &"play"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_vr1f0"]
+resource_name = "zoom_onto_tree"
+length = 3.0
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera2D:zoom")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.2, 0.75, 3),
+"transitions": PackedFloat32Array(1, 0.482968, 1),
+"update": 0,
+"values": [Vector2(1.1, 1.1), Vector2(1.03, 1.03), Vector2(6.1, 6.1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Camera2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.75, 3),
+"transitions": PackedFloat32Array(0.196146, 1),
+"update": 0,
+"values": [Vector2(176, 462), Vector2(-578.89, 367.32)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("SubViewport/blackoutBG:color")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.1, 0.3, 0.5, 1.25, 3),
+"transitions": PackedFloat32Array(1, 1.7411, 1, 0.784584, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../SFX-Start")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [0.0],
+"method": &"play"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_t1dhk"]
+_data = {
+&"RESET": SubResource("Animation_t1dhk"),
+&"zoom_onto_tree": SubResource("Animation_vr1f0")
+}
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_vr1f0"]
+shader = ExtResource("4_16hvj")
+shader_parameter/cloud = ExtResource("4_trj04")
+shader_parameter/opacity = 0.2
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_5egv6"]
+shader = ExtResource("6_vr1f0")
+shader_parameter/grass_texture = ExtResource("7_t1dhk")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_trj04"]
 shader = ExtResource("5_cp0ys")
-shader_parameter/UV_Adjust = Vector2(2.66, 1)
+shader_parameter/UV_Adjust = Vector2(4.695, 1)
 shader_parameter/Pattern = ExtResource("6_yhxw7")
 shader_parameter/Pattern_Opacity = 0.3
 
@@ -80,14 +206,65 @@ grow_vertical = 2
 theme = ExtResource("1_28flt")
 script = ExtResource("2_48xlc")
 
-[node name="Panel" type="Panel" parent="."]
+[node name="play_button_sequence" type="AnimationPlayer" parent="."]
+root_node = NodePath("../AnimatedBG")
+libraries = {
+&"": SubResource("AnimationLibrary_t1dhk")
+}
+
+[node name="AnimatedBG" type="SubViewportContainer" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_ce3w2")
+stretch = true
+
+[node name="Camera2D" type="Camera2D" parent="AnimatedBG"]
+position = Vector2(176, 462)
+offset = Vector2(765.54, 76.59)
+editor_draw_limits = true
+
+[node name="SubViewport" type="SubViewport" parent="AnimatedBG"]
+handle_input_locally = false
+msaa_2d = 1
+gui_disable_input = true
+size = Vector2i(1920, 1080)
+render_target_update_mode = 4
+
+[node name="main bg" type="TextureRect" parent="AnimatedBG/SubViewport"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_yhxw7")
+
+[node name="clouds" type="TextureRect" parent="AnimatedBG/SubViewport"]
+material = SubResource("ShaderMaterial_vr1f0")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_trj04")
+
+[node name="TextureRect" type="TextureRect" parent="AnimatedBG/SubViewport"]
+material = SubResource("ShaderMaterial_5egv6")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("7_t1dhk")
+
+[node name="blackoutBG" type="ColorRect" parent="AnimatedBG/SubViewport"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="HBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
@@ -118,6 +295,7 @@ custom_minimum_size = Vector2(0, 120)
 layout_mode = 2
 size_flags_horizontal = 5
 size_flags_vertical = 4
+mouse_default_cursor_shape = 2
 text = "Start Game"
 script = ExtResource("4_cp0ys")
 
@@ -129,6 +307,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 1
 texture = ExtResource("4_opfnp")
 draw_center = false
 region_rect = Rect2(0, 0, 505, 508)
@@ -149,6 +328,7 @@ offset_right = -13.445
 offset_bottom = -15.9
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 1
 color = Color(0.59, 0.420867, 0.0826, 1)
 
 [node name="fill-pattern" type="ColorRect" parent="HBoxContainer/VBoxContainer/Play_Button"]
@@ -164,6 +344,7 @@ offset_right = -13.445
 offset_bottom = -15.9
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 1
 
 [node name="Options_Button" type="Button" parent="HBoxContainer/VBoxContainer"]
 z_index = 3
@@ -172,6 +353,7 @@ custom_minimum_size = Vector2(0, 120)
 layout_mode = 2
 size_flags_horizontal = 5
 size_flags_vertical = 4
+mouse_default_cursor_shape = 2
 text = "Options"
 script = ExtResource("4_cp0ys")
 
@@ -183,6 +365,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 1
 texture = ExtResource("4_opfnp")
 draw_center = false
 region_rect = Rect2(0, 0, 505, 508)
@@ -203,6 +386,7 @@ offset_right = -13.445
 offset_bottom = -15.9
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 1
 color = Color(0.59, 0.420867, 0.0826, 1)
 
 [node name="fill-pattern" type="ColorRect" parent="HBoxContainer/VBoxContainer/Options_Button"]
@@ -218,6 +402,7 @@ offset_right = -13.445
 offset_bottom = -15.9
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 1
 
 [node name="Leaderboards_Button" type="Button" parent="HBoxContainer/VBoxContainer"]
 z_index = 3
@@ -226,6 +411,7 @@ custom_minimum_size = Vector2(0, 120)
 layout_mode = 2
 size_flags_horizontal = 5
 size_flags_vertical = 4
+mouse_default_cursor_shape = 2
 text = "Leaderboard"
 script = ExtResource("4_cp0ys")
 
@@ -237,6 +423,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 1
 texture = ExtResource("4_opfnp")
 draw_center = false
 region_rect = Rect2(0, 0, 505, 508)
@@ -257,6 +444,7 @@ offset_right = -13.445
 offset_bottom = -15.9
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 1
 color = Color(0.59, 0.420867, 0.0826, 1)
 
 [node name="fill-pattern" type="ColorRect" parent="HBoxContainer/VBoxContainer/Leaderboards_Button"]
@@ -272,6 +460,7 @@ offset_right = -13.445
 offset_bottom = -15.9
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 1
 
 [node name="Exit_Button" type="Button" parent="HBoxContainer/VBoxContainer"]
 z_index = 3
@@ -280,6 +469,7 @@ custom_minimum_size = Vector2(0, 120)
 layout_mode = 2
 size_flags_horizontal = 5
 size_flags_vertical = 4
+mouse_default_cursor_shape = 2
 text = "Exit"
 script = ExtResource("4_cp0ys")
 
@@ -291,6 +481,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 1
 texture = ExtResource("4_opfnp")
 draw_center = false
 region_rect = Rect2(0, 0, 505, 508)
@@ -311,6 +502,7 @@ offset_right = -13.445
 offset_bottom = -15.9
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 1
 color = Color(0.59, 0.420867, 0.0826, 1)
 
 [node name="fill-pattern" type="ColorRect" parent="HBoxContainer/VBoxContainer/Exit_Button"]
@@ -326,6 +518,7 @@ offset_right = -13.445
 offset_bottom = -15.9
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 1
 
 [node name="Fade" type="ColorRect" parent="."]
 visible = false
@@ -342,6 +535,18 @@ color = Color(0.1485, 0.364575, 0.45, 0)
 libraries = {
 &"": SubResource("AnimationLibrary_ce3w2")
 }
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+autoplay = true
+bus = &"Music"
+script = ExtResource("12_t1dhk")
+
+[node name="SFX-Buttons" type="AudioStreamPlayer" parent="."]
+bus = &"Sound Effects"
+
+[node name="SFX-Start" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("13_5egv6")
+bus = &"Sound Effects"
 
 [connection signal="pressed" from="HBoxContainer/VBoxContainer/Play_Button" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="HBoxContainer/VBoxContainer/Options_Button" to="." method="_on_options_button_pressed"]

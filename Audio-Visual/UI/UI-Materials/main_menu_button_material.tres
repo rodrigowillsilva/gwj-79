@@ -13,7 +13,7 @@ default_input_values = [0, Quaternion(0, 0, 0, 0)]
 op_type = 2
 
 [sub_resource type="VisualShaderNodeFloatConstant" id="VisualShaderNodeFloatConstant_32bjl"]
-constant = 20.0
+constant = 3.0
 
 [sub_resource type="VisualShaderNodeColorConstant" id="VisualShaderNodeColorConstant_32bjl"]
 
@@ -43,7 +43,7 @@ texture_type = 1
 
 [sub_resource type="VisualShaderNodeInput" id="VisualShaderNodeInput_tc13j"]
 output_port_for_preview = 0
-input_name = "screen_uv"
+input_name = "uv"
 
 [sub_resource type="VisualShaderNodeInput" id="VisualShaderNodeInput_isoit"]
 output_port_for_preview = 0
@@ -59,7 +59,7 @@ default_input_values = [0, Vector2(0, 0), 1, Vector2(0, 0)]
 op_type = 0
 
 [sub_resource type="VisualShaderNodeFloatOp" id="VisualShaderNodeFloatOp_deoh6"]
-default_input_values = [0, 0.0, 1, 0.5]
+default_input_values = [0, 0.0, 1, -0.5]
 operator = 2
 
 [sub_resource type="VisualShaderNodeColorOp" id="VisualShaderNodeColorOp_21tgf"]
@@ -79,11 +79,11 @@ uniform float Pattern_Opacity = 0.40000000596046;
 
 void fragment() {
 // Input:3
-	vec2 n_out3p0 = SCREEN_UV;
+	vec2 n_out3p0 = UV;
 
 
 // FloatConstant:12
-	float n_out12p0 = 20.000000;
+	float n_out12p0 = 3.000000;
 
 
 // VectorOp:5
@@ -103,7 +103,7 @@ void fragment() {
 
 
 // FloatOp:8
-	float n_in8p1 = 0.50000;
+	float n_in8p1 = -0.50000;
 	float n_out8p0 = n_out4p0 * n_in8p1;
 
 

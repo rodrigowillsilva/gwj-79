@@ -20,27 +20,27 @@
 [ext_resource type="Texture2D" uid="uid://du4tg5dsjks1v" path="res://Audio-Visual/2D-Sprites/Parts/squirrel-red/leg.png" id="16_bmpy1"]
 [ext_resource type="Texture2D" uid="uid://c08tl3cewfaok" path="res://Audio-Visual/2D-Sprites/Parts/squirrel-red/tail.png" id="17_ai168"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_1e0au"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_3f3ws"]
 atlas = ExtResource("5_yjicq")
 region = Rect2(0, 0, 512, 512)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_0yf2h"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_jp6rx"]
 atlas = ExtResource("6_ojv5r")
 region = Rect2(0, 0, 64, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_8q1gi"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_nta8o"]
 atlas = ExtResource("7_x041o")
 region = Rect2(768, 0, 128, 128)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_lsoj3"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_11om2"]
 atlas = ExtResource("8_75aqr")
 region = Rect2(2560, 0, 512, 512)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_h6wgo"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_qnnwt"]
 atlas = ExtResource("9_di1kq")
 region = Rect2(1536, 0, 512, 512)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_3ubhl"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_1chf7"]
 atlas = ExtResource("9_di1kq")
 region = Rect2(7680, 0, 512, 512)
 
@@ -72,7 +72,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -86.7301, 0)
 [node name="King" parent="Characters" instance=ExtResource("2_bbvqu")]
 transform = Transform3D(0.255, 0, 0, 0, 0.255, 0, 0, 0, 0.255, 0, 17.2622, -8.81662)
 
-[node name="Sprite" parent="Characters/King" index="0"]
+[node name="Sprite" parent="Characters/King" index="1"]
 appearance_template = ExtResource("4_t47rr")
 
 [node name="Body" parent="Characters/King/Sprite" index="0"]
@@ -84,35 +84,35 @@ texture = ExtResource("6_jp6rx")
 
 [node name="Hat" parent="Characters/King/Sprite/Body/Head" index="0"]
 offset = Vector2(-14.74, 54.6)
-texture = SubResource("AtlasTexture_1e0au")
+texture = SubResource("AtlasTexture_3f3ws")
 
 [node name="Eye-R" parent="Characters/King/Sprite/Body/Head" index="1"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.652, -0.092, 0.011)
 offset = Vector2(5.085, -9.28)
-texture = SubResource("AtlasTexture_0yf2h")
+texture = SubResource("AtlasTexture_jp6rx")
 
 [node name="Eye-L" parent="Characters/King/Sprite/Body/Head" index="2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.474, -0.092, 0.011)
 offset = Vector2(-5.085, -9.28)
 flip_h = false
-texture = SubResource("AtlasTexture_0yf2h")
+texture = SubResource("AtlasTexture_jp6rx")
 
 [node name="Eyebrow-R" parent="Characters/King/Sprite/Body/Head" index="3"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.74246, 0.170345, 0)
 offset = Vector2(-0.075, 14.11)
-texture = SubResource("AtlasTexture_8q1gi")
+texture = SubResource("AtlasTexture_nta8o")
 
 [node name="Eyebrow-L" parent="Characters/King/Sprite/Body/Head" index="4"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.580052, 0.170345, 0)
 offset = Vector2(-0.075, 14.11)
-texture = SubResource("AtlasTexture_8q1gi")
+texture = SubResource("AtlasTexture_nta8o")
 
 [node name="Fluff" parent="Characters/King/Sprite/Body" index="1"]
 texture = ExtResource("10_nta8o")
 
 [node name="Accessory" parent="Characters/King/Sprite/Body" index="2"]
 offset = Vector2(-10.32, -119.815)
-texture = SubResource("AtlasTexture_lsoj3")
+texture = SubResource("AtlasTexture_11om2")
 
 [node name="Arm1-R" parent="Characters/King/Sprite/Body" index="3"]
 texture = ExtResource("12_11om2")
@@ -125,7 +125,7 @@ texture = ExtResource("14_1chf7")
 
 [node name="Object-R" parent="Characters/King/Sprite/Body/Arm1-R/Arm2-R/Hand-R" index="0"]
 offset = Vector2(49.145, -90.86)
-texture = SubResource("AtlasTexture_h6wgo")
+texture = SubResource("AtlasTexture_qnnwt")
 
 [node name="Arm1-L" parent="Characters/King/Sprite/Body" index="4"]
 texture = ExtResource("12_11om2")
@@ -137,7 +137,7 @@ texture = ExtResource("13_qnnwt")
 texture = ExtResource("14_1chf7")
 
 [node name="Object-L" parent="Characters/King/Sprite/Body/Arm1-L/Arm2-L/Hand-L" index="0"]
-texture = SubResource("AtlasTexture_3ubhl")
+texture = SubResource("AtlasTexture_1chf7")
 
 [node name="Leg-R" parent="Characters/King/Sprite/Body" index="5"]
 texture = ExtResource("16_bmpy1")
@@ -146,6 +146,7 @@ texture = ExtResource("16_bmpy1")
 texture = ExtResource("16_bmpy1")
 
 [node name="Tail" parent="Characters/King/Sprite/Body" index="7"]
+transform = Transform3D(0.99974, -0.0228181, 0, 0.0228181, 0.99974, 0, 0, 0, 1, -0.0612543, -1.70397, -0.011)
 texture = ExtResource("17_ai168")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]

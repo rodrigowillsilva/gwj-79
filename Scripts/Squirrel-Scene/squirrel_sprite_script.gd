@@ -4,6 +4,7 @@ class_name squirrel_sprite_controller
 extends Node3D
 @export var appearance_template: Squirrel_Appearance
 
+@export var raven_sprite: Sprite3D = self.get_parent().get_node("RavenSprite")
 
 @onready var body: Sprite3D = get_node("Body")
 @onready var head: Sprite3D = body.get_node("Head")
@@ -45,6 +46,7 @@ extends Node3D
 @onready var appearance: Squirrel_Appearance
 
 func _ready():
+	raven_sprite.visible = false
 	change_appearance(appearance_template)
 	
 	hat.texture = hat_atlas
@@ -61,6 +63,10 @@ func _ready():
 	update_all_sprites()
 	update_all_transforms()
 	notify_property_list_changed()
+
+func make_raven():
+	raven_sprite.visible = true
+	self.visible = false
 
 
 func _process(delta):
