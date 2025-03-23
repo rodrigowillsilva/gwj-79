@@ -1,24 +1,25 @@
-[gd_resource type="Resource" script_class="Request" load_steps=2 format=3 uid="uid://dmlkt4ghh2xis"]
+[gd_resource type="Resource" script_class="Request" load_steps=3 format=3 uid="uid://db3wtvk37iml7"]
 
-[ext_resource type="Script" uid="uid://cu8y4lhboi3w7" path="res://Data/Custom Resources/Requests/base_resource.gd" id="1_4qhho"]
+[ext_resource type="Resource" uid="uid://brv35b61pv5ec" path="res://Audio-Visual/Character-Appearances/MagicSquirrelTheFourth.tres" id="1_5hnfm"]
+[ext_resource type="Script" uid="uid://cu8y4lhboi3w7" path="res://Data/Custom Resources/base_resource.gd" id="2_tq22y"]
 
 [resource]
-script = ExtResource("1_4qhho")
-title = "Request Titleasdas"
-description = "Request Description"
-squirrel_text_line = ""
-decision_approve_title = ""
-decision_deny_title = ""
-decision_approved_text = ""
-decision_denied_text = ""
-approved_acorn_cost = 0
-approved_consequence_text = ""
+script = ExtResource("2_tq22y")
+title = "SQUIRREL STONKS"
+description = "A new market calls for a new approach. Investing now will benefit us well!"
+decision_approve_title = "INVEST"
+decision_approve_subtitle = "chance of good consequences"
+decision_deny_title = "SAVE"
+decision_deny_subtitle = "Deny Subtitle"
+approved_acorn_cost = -500
+approved_consequence_text = "Let's hope it's a good investment"
 approved_population_cost = 0
 approved_loyalty_cost = 0
 approved_tree_height_cost = 0
 denied_acorn_cost = 0
-denied_consequence_text = ""
-denied_population_cost = 0
+denied_consequence_text = "The businessman looks elsewhere for opportunities."
+denied_population_cost = -1
 denied_loyalty_cost = 0
 denied_tree_height_cost = 0
-pool = ""
+pool = 2
+appearance = ExtResource("1_5hnfm")

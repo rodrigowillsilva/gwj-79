@@ -1,12 +1,21 @@
-[gd_scene load_steps=2 format=3 uid="uid://cx3pejkdi4vhv"]
+[gd_scene load_steps=3 format=3 uid="uid://cx3pejkdi4vhv"]
 
 [ext_resource type="Script" uid="uid://jqieeumd01r6" path="res://Data/Custom Resources/request_generator.gd" id="1_xr4c0"]
+[ext_resource type="Resource" uid="uid://brv35b61pv5ec" path="res://Audio-Visual/Character-Appearances/MagicSquirrelTheFourth.tres" id="2_gtcov"]
 
 [node name="RequestGenerator" type="Node"]
 script = ExtResource("1_xr4c0")
-title = "Request Titleasdas"
-squirrel_text_line = "Squirrel Voice Lineasdas"
-decision_deny_title = "Deny Titleasdasd"
-decision_denied_text = "Denied Squirrel Voice Lineasdad"
-pool = null
+title = "NEW GEAR"
+description = "Greetings. The Squirrel Squadron returns from their scouting report with damaged weapons and armor. We require funding to renew our gear."
+decision_approve_title = "FUND ARMY"
+decision_deny_title = "SAVE"
+approved_acorn_cost = -1000
+approved_consequence_text = "A good army requires equally good gear."
+approved_population_cost = 5
+approved_loyalty_cost = 15
+approved_special_effect = null
+denied_consequence_text = "Your most experienced fighters are disappointed in you."
+denied_loyalty_cost = -15
+denied_special_effect = null
+appearance = ExtResource("2_gtcov")
 metadata/_custom_type_script = "uid://jqieeumd01r6"

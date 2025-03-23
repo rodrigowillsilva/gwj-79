@@ -1,0 +1,70 @@
+[gd_scene load_steps=11 format=3 uid="uid://dh8f3l5i6d5mg"]
+
+[ext_resource type="PackedScene" uid="uid://miq2xyyis8r6" path="res://Scenes/Managers/level_manager.tscn" id="1_q2fht"]
+[ext_resource type="PackedScene" uid="uid://cyi6nxre0iaro" path="res://Scenes/UI/main_ui.tscn" id="2_ikcpc"]
+[ext_resource type="PackedScene" uid="uid://br57v2ketvu5p" path="res://Scenes/throne_room_scene.tscn" id="3_5erdv"]
+[ext_resource type="Script" uid="uid://cu8y4lhboi3w7" path="res://Data/Custom Resources/base_resource.gd" id="3_f3gli"]
+[ext_resource type="PackedScene" uid="uid://e42u2q2btptm" path="res://Scenes/squirrel.tscn" id="3_qbrl8"]
+[ext_resource type="Resource" uid="uid://4ohhlgb17ofh" path="res://Data/Custom Resources/Requests/request_0.tres" id="4_2jcip"]
+[ext_resource type="Resource" uid="uid://cwi5cgyvkjn13" path="res://Data/Custom Resources/Requests/request_1.tres" id="5_6l6h0"]
+[ext_resource type="Resource" uid="uid://cl4voalax7jlh" path="res://Data/Custom Resources/Requests/request_2.tres" id="6_o18aq"]
+[ext_resource type="Resource" uid="uid://db3wtvk37iml7" path="res://Data/Custom Resources/Requests/request_3.tres" id="7_hd7sb"]
+[ext_resource type="Resource" uid="uid://bis70nxu6rjpc" path="res://Data/Custom Resources/Requests/request_4.tres" id="8_5vthg"]
+
+[node name="Main level" type="Node3D"]
+
+[node name="Main UI" parent="." instance=ExtResource("2_ikcpc")]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(-2.16194e-07, 0.188993, -0.981979, 2.47834e-08, 0.981979, 0.188993, 1, 1.65223e-08, -2.16981e-07, -6.48482, 2.764, 0)
+
+[node name="Level Manager" parent="." instance=ExtResource("1_q2fht")]
+
+[node name="Request" parent="Level Manager" index="2"]
+requests = Array[ExtResource("3_f3gli")]([ExtResource("4_2jcip"), ExtResource("5_6l6h0"), ExtResource("6_o18aq"), ExtResource("7_hd7sb"), ExtResource("8_5vthg")])
+
+[node name="Entities" parent="Level Manager" index="3" node_paths=PackedStringArray("_entities")]
+_entities = {
+"requestor": NodePath("../../Entities/Squirrel")
+}
+
+[node name="Entities" type="Node3D" parent="."]
+
+[node name="King" parent="Entities" node_paths=PackedStringArray("enter_the_room_position", "exit_the_room_position") instance=ExtResource("3_qbrl8")]
+transform = Transform3D(-8.74228e-09, 0, -0.2, 0, 0.2, 0, 0.2, 0, -8.74228e-09, 0, 0, 0)
+enter_the_room_position = NodePath("../../Enter Location")
+exit_the_room_position = NodePath("../../Asking Location")
+
+[node name="Sprite" parent="Entities/King" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5044e-06, 9.82894, 34.4166)
+
+[node name="Accessory" parent="Entities/King/Sprite/Body" index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 12.8111, 0)
+
+[node name="Squirrel" parent="Entities" node_paths=PackedStringArray("enter_the_room_position", "exit_the_room_position") instance=ExtResource("3_qbrl8")]
+transform = Transform3D(-8.74228e-09, 0, 0.2, 0, 0.2, 0, -0.2, 0, -8.74228e-09, 0, 0, 0)
+enter_the_room_position = NodePath("../../Enter Location")
+exit_the_room_position = NodePath("../../Asking Location")
+
+[node name="Sprite" parent="Entities/Squirrel" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.59252, 0)
+
+[node name="Accessory" parent="Entities/Squirrel/Sprite/Body" index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 25.1661, 0)
+
+[node name="Terrain" type="Node3D" parent="."]
+
+[node name="ThroneRoomScene" parent="Terrain" instance=ExtResource("3_5erdv")]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -0.621558, 0.783368, 0, -0.783368, -0.621558, 0, 8.70708, -13.7411)
+
+[node name="Enter Location" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.462, 0.494279, 0)
+
+[node name="Asking Location" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.78741, 0.494279, 0)
+
+[editable path="Level Manager"]
+[editable path="Entities/King"]
+[editable path="Entities/Squirrel"]

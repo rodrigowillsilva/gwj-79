@@ -1,24 +1,27 @@
-[gd_resource type="Resource" script_class="Request" load_steps=2 format=3 uid="uid://1cc1uaf2n7cg"]
+[gd_resource type="Resource" script_class="Request" load_steps=3 format=3 uid="uid://cl4voalax7jlh"]
 
-[ext_resource type="Script" uid="uid://cu8y4lhboi3w7" path="res://Data/Custom Resources/Requests/base_resource.gd" id="1_jhqaa"]
+[ext_resource type="Resource" uid="uid://brv35b61pv5ec" path="res://Audio-Visual/Character-Appearances/MagicSquirrelTheFourth.tres" id="1_lqe4o"]
+[ext_resource type="Script" uid="uid://cu8y4lhboi3w7" path="res://Data/Custom Resources/base_resource.gd" id="2_q15n1"]
 
 [resource]
-script = ExtResource("1_jhqaa")
-title = "Request Title"
-description = "Request Description"
-squirrel_text_line = ""
-decision_approve_title = ""
-decision_deny_title = ""
-decision_approved_text = ""
-decision_denied_text = ""
-approved_acorn_cost = 0
-approved_consequence_text = ""
-approved_population_cost = 0
-approved_loyalty_cost = 0
+script = ExtResource("2_q15n1")
+title = "FORBIDDEN KNOWLEDGE"
+description = "Majesty, we have come across breakthroughs in the infamous science of alchemy. With proper funding, we may reach places unknown..."
+decision_approve_title = "INVEST"
+decision_approve_subtitle = "chance of wondrous consequences"
+decision_deny_title = "REFUSE"
+decision_deny_subtitle = ""
+approved_acorn_cost = -1000
+approved_consequence_text = "There is only one way to find out..."
+approved_population_cost = -1
+approved_loyalty_cost = 5
 approved_tree_height_cost = 0
+approved_special_effect = 0
 denied_acorn_cost = 0
-denied_consequence_text = ""
+denied_consequence_text = "They shall science their way out of their jail cell."
 denied_population_cost = 0
-denied_loyalty_cost = 0
+denied_loyalty_cost = 30
 denied_tree_height_cost = 0
-pool = ""
+denied_special_effect = -1
+pool = 1
+appearance = ExtResource("1_lqe4o")

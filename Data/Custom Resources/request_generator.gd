@@ -5,22 +5,24 @@ class_name RequestGenerator
 
 @export var title: String = "Request Title"
 @export var description: String = "Request Description"
-@export var squirrel_text_line: String = "Squirrel Voice Line"
 @export var decision_approve_title: String = "Approve Title"
+@export var decision_approve_subtitle: String = "Approve Subtitle"
 @export var decision_deny_title: String = "Deny Title"
-@export var decision_approved_text: String  = "Approved Squirrel Voice Line"
-@export var decision_denied_text: String = "Denied Squirrel Voice Line"
+@export var decision_deny_subtitle: String = "Deny Subtitle"
 @export var approved_acorn_cost: int = 0
 @export var approved_consequence_text: String = "Approved Consequence Text"
 @export var approved_population_cost: int = 0
 @export var approved_loyalty_cost: int = 0
 @export var approved_tree_height_cost: int = 0
+@export var approved_special_effect: int = 0
 @export var denied_acorn_cost: int = 0
 @export var denied_consequence_text: String = "Denied Consequence Text"
 @export var denied_population_cost: int = 0
 @export var denied_loyalty_cost: int = 0
 @export var denied_tree_height_cost: int = 0
+@export var denied_special_effect: int = 0
 @export var pool: EnumsClassesConsts.RequestPool = EnumsClassesConsts.RequestPool.All
+@export var appearance: Squirrel_Appearance
 
 @export_tool_button("Create Request", "Callable") var create_request_button = create_request
 func create_request():
@@ -28,22 +30,24 @@ func create_request():
 	var request_resource = Request.new({
 		"request_title": title,
 		"request_description": description,
-		"squirrel_text_line": squirrel_text_line,
 		"decision_approve_title": decision_approve_title,
+		"decision_approve_subtitle": decision_approve_subtitle,
 		"decision_deny_title": decision_deny_title,
-		"decision_approved_text": decision_approved_text,
-		"decision_denied_text": decision_denied_text,
+		"decision_deny_subtitle": decision_deny_subtitle,
 		"approved_acorn_cost": approved_acorn_cost,
 		"approved_consequence_text": approved_consequence_text,
 		"approved_population_cost": approved_population_cost,
 		"approved_loyalty_cost": approved_loyalty_cost,
 		"approved_tree_height_cost": approved_tree_height_cost,
+		"approved_special_effect": approved_special_effect,
 		"denied_acorn_cost": denied_acorn_cost,
 		"denied_consequence_text": denied_consequence_text,
 		"denied_population_cost": denied_population_cost,
 		"denied_loyalty_cost": denied_loyalty_cost,
 		"denied_tree_height_cost": denied_tree_height_cost,
-		"pool": pool
+		"denied_special_effect": denied_special_effect,
+		"pool": pool,
+		"appearance": appearance
 	}
 	)
 

@@ -1,24 +1,25 @@
 extends Node
 class_name Entities
 
-@export var _entities: Dictionary[String, Node3D] = {}
+signal entity_speak(message: String)
+
+@export var _entities: Dictionary[String, SquirrelMaster] = {}
 
 func _init():
 	_format_entities_dictionary()
 
-func _ready() -> void:
-	CommunicationBus.listen_to_signal("entity_speak", _on_entity_speak)
-	CommunicationBus.listen_to_signal("entity_move", _on_entity_move)
 
-
-func _on_entity_speak(entity_name: String, message: String) -> void:
+func speak(entity_name: String, message: String) -> void:
 	if _entities.has(format(entity_name)):
 		_entities[format(entity_name)].speak(message)    
 	
+func move_requestor(animation_name: String) -> void:
+	if _entities.has("requestor"):
+		_entities["requestor"].move(animation_name)
 
-func _on_entity_move(entity_name: String, animation_name: String) -> void:
-	if _entities.has(format(entity_name)):
-		_entities[format(entity_name)].move(animation_name)
+func prepare_requestor(request: Request) -> void:
+	if _entities.has("requestor"):
+		_entities["requestor"].prepare_request(request) 
 
 func _format_entities_dictionary() -> void:
 	var aux_entities = _entities.duplicate()

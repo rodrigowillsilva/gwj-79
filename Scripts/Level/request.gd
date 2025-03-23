@@ -1,46 +1,55 @@
 extends Node
 class_name RequestManager
 
-const REQUEST_DATA_PATH = "res://Data/Requests/"
-
-var _requests: Dictionary = {}
+@export var requests: Array[Request]
+var _current_day_requests: Array[Request] = []
 
 func _init() -> void:
 	pass
-	#load_requests()
 
 
-func get_random_request_by_group(request_group: EnumsClassesConsts.RequestGroup) -> EnumsClassesConsts.RequestInfo:
-	var request_index = calculate_random_request_index_by_group(request_group)
+func load_current_day_requests() -> void:
+	_current_day_requests.clear()
+	for request_index in range(0, 10):
+		if request_index <= 3:
+			_load_early_request()
+		elif request_index <= 8:
+			_load_anytime_request()
+		else:
+			_load_late_request()
 
-	var request_data = _get_request_data(request_index)
+	# #print the requests
+	# for request in _current_day_requests:
+	# 	print(request.title)
 
-	var request_info:EnumsClassesConsts.RequestInfo = EnumsClassesConsts.RequestInfo.new(
-			request_data)
+func _load_early_request() -> void:
+	var request_info = get_random_request_by_group(EnumsClassesConsts.RequestPool.Early if randf() < 0.8 else EnumsClassesConsts.RequestPool.All)
+	_current_day_requests.append(request_info)
 
-	return request_info
+func _load_anytime_request() -> void:
+	var request_info = get_random_request_by_group(EnumsClassesConsts.RequestPool.All)
+	_current_day_requests.append(request_info)
 
-func get_specific_request(request_index: int) -> EnumsClassesConsts.RequestInfo:
-	var request_data = _get_request_data(request_index)
+func _load_late_request() -> void:
+	var request_info = get_random_request_by_group(EnumsClassesConsts.RequestPool.Late if randf() < 0.8 else EnumsClassesConsts.RequestPool.All)
+	_current_day_requests.append(request_info)
 
-	var request_info:EnumsClassesConsts.RequestInfo = EnumsClassesConsts.RequestInfo.new(
-			request_data)
-	
-	return request_info
+func get_random_request_by_group(request_pool: EnumsClassesConsts.RequestPool) -> Request:
+	var request_index = calculate_random_request_index_by_group(request_pool)
 
-#func load_requests() -> void:
-	
-		
+	var request = get_specific_request(request_index)
 
-						
-							
-func _get_request_data(request_index: int) -> Dictionary:
-	return _requests["req" + str(request_index)]
+	return request
 
-func calculate_random_request_index_by_group(request_group: EnumsClassesConsts.RequestGroup) -> int:
-	var request_index = randi() % _requests.size() + 1
-	while _requests["req" + str(request_index)]["group"] != str(request_group):
-		request_index = randi() % _requests.size() + 1
-	return request_index	
+func get_specific_request(request_index: int) -> Request:
+	var request = requests[request_index]
+	return request
+
+
+func calculate_random_request_index_by_group(request_pool: EnumsClassesConsts.RequestPool) -> int:
+	var request_index = randi() % requests.size()
+	while requests[request_index]["pool"] != request_pool:
+		request_index = randi() % requests.size()
+	return request_index
 			
 		

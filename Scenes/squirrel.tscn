@@ -1,0 +1,211 @@
+[gd_scene load_steps=21 format=3 uid="uid://e42u2q2btptm"]
+
+[ext_resource type="Script" uid="uid://c5iaoafebywga" path="res://Scripts/Squirrel/squirrel_master_script.gd" id="1_1rkqu"]
+[ext_resource type="Texture2D" uid="uid://dapv0iop4n4h0" path="res://Audio-Visual/2D-Sprites/Parts/body.png" id="1_6drw7"]
+[ext_resource type="Texture2D" uid="uid://cskx5gkqji0u4" path="res://Audio-Visual/2D-Sprites/Parts/head.png" id="2_mtflv"]
+[ext_resource type="Script" uid="uid://dykrtdge2uyuv" path="res://Scripts/Squirrel/squirrel_sprite_script.gd" id="2_yns4c"]
+[ext_resource type="Texture2D" uid="uid://chut1ah0v3iyg" path="res://Audio-Visual/2D-Sprites/Parts/hat_atlas_resource.tres" id="3_c50f1"]
+[ext_resource type="Resource" uid="uid://brv35b61pv5ec" path="res://Audio-Visual/Character-Appearances/MagicSquirrelTheFourth.tres" id="3_yns4c"]
+[ext_resource type="Texture2D" uid="uid://q352pbuc7jj6" path="res://Audio-Visual/2D-Sprites/Parts/eye_atlas_resource.tres" id="4_81htl"]
+[ext_resource type="Texture2D" uid="uid://cjl7ur36qndkx" path="res://Audio-Visual/2D-Sprites/Parts/fluff.png" id="5_axlhr"]
+[ext_resource type="Texture2D" uid="uid://1t0ajv4uh8id" path="res://Audio-Visual/2D-Sprites/Parts/eyebrow_atlas_resource.tres" id="5_mtflv"]
+[ext_resource type="Texture2D" uid="uid://di7icm5sp1hbq" path="res://Audio-Visual/2D-Sprites/Parts/arm-1.png" id="6_1rkqu"]
+[ext_resource type="Texture2D" uid="uid://4y7rj4myu7w4" path="res://Audio-Visual/2D-Sprites/Parts/accessory_atlas_resource.tres" id="7_81htl"]
+[ext_resource type="Texture2D" uid="uid://dyptbbq0uoccm" path="res://Audio-Visual/2D-Sprites/Parts/arm-2.png" id="7_yns4c"]
+[ext_resource type="Texture2D" uid="uid://cqqur53l3g47e" path="res://Audio-Visual/2D-Sprites/Parts/hand.png" id="8_t24ju"]
+[ext_resource type="Texture2D" uid="uid://chg1gqa2okmos" path="res://Audio-Visual/2D-Sprites/Parts/leg.png" id="9_10dpx"]
+[ext_resource type="Texture2D" uid="uid://dhu278jhlx8fr" path="res://Audio-Visual/2D-Sprites/Parts/tail.png" id="10_5n16k"]
+[ext_resource type="Texture2D" uid="uid://1w7rb4mr7m8f" path="res://Audio-Visual/2D-Sprites/Parts/object_atlas_resource.tres" id="11_axlhr"]
+
+[sub_resource type="Animation" id="Animation_t24ju"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_10dpx"]
+resource_name = "walk_away_from_king"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_yns4c"]
+resource_name = "walk_to_the_king"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 0, 0)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(3),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"on_ready_to_request"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_10dpx"]
+_data = {
+&"RESET": SubResource("Animation_t24ju"),
+&"walk_away_from_king": SubResource("Animation_10dpx"),
+&"walk_to_the_king": SubResource("Animation_yns4c")
+}
+
+[node name="Squirrel" type="Node3D"]
+script = ExtResource("1_1rkqu")
+
+[node name="Sprite" type="Node3D" parent="."]
+script = ExtResource("2_yns4c")
+appearance = ExtResource("3_yns4c")
+
+[node name="Body" type="Sprite3D" parent="Sprite"]
+texture = ExtResource("1_6drw7")
+
+[node name="Head" type="Sprite3D" parent="Sprite/Body"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.825, 0.01)
+sorting_offset = 20.0
+texture = ExtResource("2_mtflv")
+
+[node name="Hat" type="Sprite3D" parent="Sprite/Body/Head"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.15906, 1.6, 0)
+texture = ExtResource("3_c50f1")
+
+[node name="Eye-R" type="Sprite3D" parent="Sprite/Body/Head"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.652, -0.092, 0.011)
+sorting_offset = 30.0
+texture = ExtResource("4_81htl")
+
+[node name="Eye-L" type="Sprite3D" parent="Sprite/Body/Head"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.454091, -0.092, 0.011)
+sorting_offset = 30.0
+texture = ExtResource("4_81htl")
+
+[node name="Eyebrow-R" type="Sprite3D" parent="Sprite/Body/Head"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.703, 0.153, 0.013)
+sorting_offset = 40.0
+texture = ExtResource("5_mtflv")
+
+[node name="Eyebrow-L" type="Sprite3D" parent="Sprite/Body/Head"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.587673, 0.153, 0.013)
+sorting_offset = 40.0
+flip_h = true
+texture = ExtResource("5_mtflv")
+
+[node name="Fluff" type="Sprite3D" parent="Sprite/Body"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.095, 1.447, 0.01)
+sorting_offset = 5.0
+texture = ExtResource("5_axlhr")
+
+[node name="Accessory" type="Sprite3D" parent="Sprite/Body"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.60611, 0)
+sorting_offset = 10.0
+offset = Vector2(-5.98, -94.665)
+texture = ExtResource("7_81htl")
+
+[node name="Arm1-R" type="Sprite3D" parent="Sprite/Body"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.20526, 1.63241, -0.01)
+sorting_offset = -10.0
+offset = Vector2(-38.475, -43.02)
+texture = ExtResource("6_1rkqu")
+
+[node name="Arm2-R" type="Sprite3D" parent="Sprite/Body/Arm1-R"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.529468, -0.953383, 0.02)
+sorting_offset = 25.0
+offset = Vector2(37.01, -4.98)
+texture = ExtResource("7_yns4c")
+
+[node name="Hand-R" type="Sprite3D" parent="Sprite/Body/Arm1-R/Arm2-R"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.766283, -0.182343, 0.01)
+sorting_offset = 45.0
+offset = Vector2(14.26, -20.255)
+texture = ExtResource("8_t24ju")
+
+[node name="Object-R" type="Sprite3D" parent="Sprite/Body/Arm1-R/Arm2-R/Hand-R"]
+sorting_offset = 15.0
+offset = Vector2(-8.91, -125.99)
+texture = ExtResource("11_axlhr")
+
+[node name="Arm1-L" type="Sprite3D" parent="Sprite/Body"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.12483, 1.63241, -0.01)
+sorting_offset = -10.0
+offset = Vector2(37.665, -43.02)
+flip_h = true
+texture = ExtResource("6_1rkqu")
+
+[node name="Arm2-L" type="Sprite3D" parent="Sprite/Body/Arm1-L"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.681001, -1.04063, -0.01)
+sorting_offset = 25.0
+offset = Vector2(-43.43, -4.98)
+flip_h = true
+texture = ExtResource("7_yns4c")
+
+[node name="Hand-L" type="Sprite3D" parent="Sprite/Body/Arm1-L/Arm2-L"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.920674, -0.128895, 0.01)
+sorting_offset = 45.0
+offset = Vector2(-5.14, -20.255)
+flip_h = true
+texture = ExtResource("8_t24ju")
+
+[node name="Object-L" type="Sprite3D" parent="Sprite/Body/Arm1-L/Arm2-L/Hand-L"]
+sorting_offset = 15.0
+offset = Vector2(8.545, -125.99)
+flip_h = true
+texture = ExtResource("11_axlhr")
+
+[node name="Leg-R" type="Sprite3D" parent="Sprite/Body"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.689925, -1.58629, 0.01)
+sorting_offset = 10.0
+offset = Vector2(-51.245, -3.81)
+texture = ExtResource("9_10dpx")
+
+[node name="Leg-L" type="Sprite3D" parent="Sprite/Body"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.710342, -1.58629, 0.01)
+sorting_offset = 10.0
+offset = Vector2(52.435, -3.81)
+flip_h = true
+texture = ExtResource("9_10dpx")
+
+[node name="Tail" type="Sprite3D" parent="Sprite/Body"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0612543, -1.70397, -0.011)
+sorting_offset = -10.0
+offset = Vector2(-286.665, 329.005)
+texture = ExtResource("10_5n16k")
+
+[node name="Squirrel_Character_Animations" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_10dpx")
+}

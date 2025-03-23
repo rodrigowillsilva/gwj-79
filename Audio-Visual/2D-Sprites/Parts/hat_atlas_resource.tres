@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://chut1ah0v3iyg"]
+
+[ext_resource type="Texture2D" uid="uid://ck5rtn8r0cox4" path="res://Audio-Visual/2D-Sprites/Parts/hat-atlas.png" id="1_w5o71"]
+
+[resource]
+atlas = ExtResource("1_w5o71")
+region = Rect2(0, 0, 512, 512)

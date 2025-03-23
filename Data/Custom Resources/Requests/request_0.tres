@@ -1,24 +1,27 @@
-[gd_resource type="Resource" script_class="Request" load_steps=2 format=3 uid="uid://eem3irqobn5d"]
+[gd_resource type="Resource" script_class="Request" load_steps=3 format=3 uid="uid://4ohhlgb17ofh"]
 
+[ext_resource type="Resource" uid="uid://brv35b61pv5ec" path="res://Audio-Visual/Character-Appearances/MagicSquirrelTheFourth.tres" id="1_17rao"]
 [ext_resource type="Script" uid="uid://cu8y4lhboi3w7" path="res://Data/Custom Resources/base_resource.gd" id="1_bwgx7"]
 
 [resource]
 script = ExtResource("1_bwgx7")
-title = "Request Titleasdas"
-description = "Request Description"
-squirrel_text_line = "Squirrel Voice Lineasdas"
-decision_approve_title = "Approve Title"
-decision_deny_title = "Deny Titleasdasd"
-decision_approved_text = "Approved Squirrel Voice Line"
-decision_denied_text = "Denied Squirrel Voice Lineasdad"
-approved_acorn_cost = 0
-approved_consequence_text = "Approved Consequence Text"
-approved_population_cost = 0
-approved_loyalty_cost = 0
+title = "TAVERN"
+description = "Our most respected Squirrel Sovereign, our loyal people desire a tavern. May you allocate the necessary funds for this?"
+decision_approve_title = "BUILD TAVERN"
+decision_approve_subtitle = ""
+decision_deny_title = "REJECT"
+decision_deny_subtitle = ""
+approved_acorn_cost = -300
+approved_consequence_text = "The Squirrels rejoice in song and laughter!"
+approved_population_cost = 5
+approved_loyalty_cost = 10
 approved_tree_height_cost = 0
+approved_special_effect = -1
 denied_acorn_cost = 0
-denied_consequence_text = "Denied Consequence Text"
+denied_consequence_text = "The Squirrels make do with the rocks and tree stumps."
 denied_population_cost = 0
-denied_loyalty_cost = 0
+denied_loyalty_cost = -10
 denied_tree_height_cost = 0
+denied_special_effect = -1
 pool = 0
+appearance = ExtResource("1_17rao")

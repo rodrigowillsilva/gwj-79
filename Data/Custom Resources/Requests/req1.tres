@@ -1,0 +1,27 @@
+[gd_resource type="Resource" script_class="Request" load_steps=3 format=3 uid="uid://coiq15qdr6sgq"]
+
+[ext_resource type="Resource" uid="uid://bvi2qayxg8s63" path="res://Audio-Visual/Character-Appearances/TestSquirrel.tres" id="1_oxdpe"]
+[ext_resource type="Script" uid="uid://cu8y4lhboi3w7" path="res://Data/Custom Resources/base_resource.gd" id="1_yf3dv"]
+
+[resource]
+script = ExtResource("1_yf3dv")
+title = "aaaaa"
+description = "bbbb"
+squirrel_text_line = "cccc"
+decision_approve_title = "dddd"
+decision_deny_title = "eee"
+decision_approved_text = "ffff"
+decision_denied_text = "gggg"
+approved_acorn_cost = 0
+approved_consequence_text = "hhhh"
+approved_population_cost = 0
+approved_loyalty_cost = 0
+approved_tree_height_cost = 0
+denied_acorn_cost = 0
+denied_consequence_text = "iiiii"
+denied_population_cost = 0
+denied_loyalty_cost = 0
+denied_tree_height_cost = 0
+pool = 2
+appearance = ExtResource("1_oxdpe")
+metadata/_custom_type_script = "uid://cu8y4lhboi3w7"

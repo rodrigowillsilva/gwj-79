@@ -1,10 +1,16 @@
-[gd_scene load_steps=6 format=3 uid="uid://miq2xyyis8r6"]
+[gd_scene load_steps=12 format=3 uid="uid://miq2xyyis8r6"]
 
 [ext_resource type="Script" uid="uid://bn7h6h1n5424w" path="res://Scripts/Level/level_manager.gd" id="1_7cdqo"]
 [ext_resource type="PackedScene" uid="uid://cpjb7x1jnigal" path="res://Scenes/Level/resources.tscn" id="2_5amh6"]
 [ext_resource type="PackedScene" uid="uid://cvb20tpbgf2d2" path="res://Scenes/Level/request.tscn" id="3_ujoj8"]
 [ext_resource type="PackedScene" uid="uid://8ldy8kufisiu" path="res://Scenes/Level/decision.tscn" id="4_e1bxh"]
+[ext_resource type="Script" uid="uid://cu8y4lhboi3w7" path="res://Data/Custom Resources/base_resource.gd" id="4_ew07r"]
 [ext_resource type="PackedScene" uid="uid://cfrfq08j3t5f0" path="res://Scenes/Level/entities.tscn" id="5_expxj"]
+[ext_resource type="Resource" uid="uid://4ohhlgb17ofh" path="res://Data/Custom Resources/Requests/request_0.tres" id="5_k73bn"]
+[ext_resource type="Resource" uid="uid://cwi5cgyvkjn13" path="res://Data/Custom Resources/Requests/request_1.tres" id="6_kyxcj"]
+[ext_resource type="Resource" uid="uid://cl4voalax7jlh" path="res://Data/Custom Resources/Requests/request_2.tres" id="7_unsge"]
+[ext_resource type="Resource" uid="uid://db3wtvk37iml7" path="res://Data/Custom Resources/Requests/request_3.tres" id="8_ehkyy"]
+[ext_resource type="Resource" uid="uid://bis70nxu6rjpc" path="res://Data/Custom Resources/Requests/request_4.tres" id="9_6m8n2"]
 
 [node name="Level Manager" type="Node"]
 script = ExtResource("1_7cdqo")
@@ -12,8 +18,19 @@ script = ExtResource("1_7cdqo")
 [node name="Timer" type="Timer" parent="."]
 
 [node name="Resources" parent="." instance=ExtResource("2_5amh6")]
+_resources = Dictionary[int, int]({
+0: 1000,
+1: 100,
+2: 50
+})
+_max_resources = Dictionary[int, int]({
+0: 99999,
+1: 1000,
+2: 100
+})
 
 [node name="Request" parent="." instance=ExtResource("3_ujoj8")]
+requests = Array[ExtResource("4_ew07r")]([ExtResource("5_k73bn"), ExtResource("6_kyxcj"), ExtResource("7_unsge"), ExtResource("8_ehkyy"), ExtResource("9_6m8n2")])
 
 [node name="Entities" parent="." instance=ExtResource("5_expxj")]
 

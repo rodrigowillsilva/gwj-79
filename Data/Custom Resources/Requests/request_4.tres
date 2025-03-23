@@ -1,24 +1,27 @@
-[gd_resource type="Resource" script_class="Request" load_steps=2 format=3 uid="uid://2yl251slpvqh"]
+[gd_resource type="Resource" script_class="Request" load_steps=3 format=3 uid="uid://bis70nxu6rjpc"]
 
-[ext_resource type="Script" uid="uid://cu8y4lhboi3w7" path="res://Data/Custom Resources/Requests/base_resource.gd" id="1_k2n4v"]
+[ext_resource type="Resource" uid="uid://brv35b61pv5ec" path="res://Audio-Visual/Character-Appearances/MagicSquirrelTheFourth.tres" id="1_56omj"]
+[ext_resource type="Script" uid="uid://cu8y4lhboi3w7" path="res://Data/Custom Resources/base_resource.gd" id="2_bsxnf"]
 
 [resource]
-script = ExtResource("1_k2n4v")
-title = "Request Titleasdas"
-description = "Request Description"
-squirrel_text_line = ""
-decision_approve_title = ""
-decision_deny_title = ""
-decision_approved_text = ""
-decision_denied_text = ""
-approved_acorn_cost = 0
-approved_consequence_text = ""
-approved_population_cost = 0
-approved_loyalty_cost = 0
+script = ExtResource("2_bsxnf")
+title = "NEW GEAR"
+description = "Greetings. The Squirrel Squadron returns from their scouting report with damaged weapons and armor. We require funding to renew our gear."
+decision_approve_title = "FUND ARMY"
+decision_approve_subtitle = "Approve Subtitle"
+decision_deny_title = "SAVE"
+decision_deny_subtitle = "Deny Subtitle"
+approved_acorn_cost = -1000
+approved_consequence_text = "A good army requires equally good gear."
+approved_population_cost = 5
+approved_loyalty_cost = 15
 approved_tree_height_cost = 0
+approved_special_effect = -1
 denied_acorn_cost = 0
-denied_consequence_text = ""
+denied_consequence_text = "Your most experienced fighters are disappointed in you."
 denied_population_cost = 0
-denied_loyalty_cost = 0
+denied_loyalty_cost = -15
 denied_tree_height_cost = 0
-pool = ""
+denied_special_effect = 0
+pool = 2
+appearance = ExtResource("1_56omj")
