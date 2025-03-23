@@ -4,12 +4,12 @@
 
 [resource]
 background_mode = 2
-background_color = Color(0.376255, 0.377534, 0.646064, 1)
 sky = ExtResource("1_erq13")
-ambient_light_source = 2
-ambient_light_color = Color(0.174921, 0.315839, 0.512687, 1)
+ambient_light_source = 3
+ambient_light_sky_contribution = 0.26
 reflected_light_source = 2
 tonemap_mode = 3
+tonemap_exposure = 1.1
 ssr_fade_in = 0.3
 ssao_enabled = true
 ssao_radius = 2.3

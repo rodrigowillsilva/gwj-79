@@ -111,22 +111,26 @@ appearance_template = ExtResource("3_yns4c")
 
 [node name="Body" type="Sprite3D" parent="Sprite"]
 transform = Transform3D(1.207, 0, 0, 0, 1.207, 0, 0, 0, 1, 0, 0, 0)
+shaded = true
 texture = ExtResource("4_yns4c")
 
 [node name="Head" type="Sprite3D" parent="Sprite/Body"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.02, 3.68, 0)
 sorting_offset = 20.0
+shaded = true
 texture = ExtResource("5_t24ju")
 
 [node name="Hat" type="Sprite3D" parent="Sprite/Body/Head"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.813723, 0)
 offset = Vector2(9.395, -2.825)
+shaded = true
 texture = SubResource("AtlasTexture_yns4c")
 
 [node name="Eye-R" type="Sprite3D" parent="Sprite/Body/Head"]
 transform = Transform3D(1.331, 0, 0, 0, 1.331, 0, 0, 0, 1, -0.652, -0.092, 0.011)
 sorting_offset = 30.0
 offset = Vector2(7.575, -7.225)
+shaded = true
 texture = SubResource("AtlasTexture_t24ju")
 
 [node name="Eye-L" type="Sprite3D" parent="Sprite/Body/Head"]
@@ -134,12 +138,14 @@ transform = Transform3D(1.331, 0, 0, 0, 1.331, 0, 0, 0, 1, 0.474, -0.092, 0.011)
 sorting_offset = 30.0
 offset = Vector2(-7.575, -7.225)
 flip_h = true
+shaded = true
 texture = SubResource("AtlasTexture_t24ju")
 
 [node name="Eyebrow-R" type="Sprite3D" parent="Sprite/Body/Head"]
 transform = Transform3D(1.332, 0, 0, 0, 1.332, 0, 0, 0, 1, -0.74246, 0.170345, 0)
 sorting_offset = 40.0
 offset = Vector2(0, -32.475)
+shaded = true
 texture = SubResource("AtlasTexture_10dpx")
 
 [node name="Eyebrow-L" type="Sprite3D" parent="Sprite/Body/Head"]
@@ -147,39 +153,46 @@ transform = Transform3D(1.332, 0, 0, 0, 1.332, 0, 0, 0, 1, 0.580052, 0.170345, 0
 sorting_offset = 40.0
 offset = Vector2(0, -32.475)
 flip_h = true
+shaded = true
 texture = SubResource("AtlasTexture_10dpx")
 
 [node name="Fluff" type="Sprite3D" parent="Sprite/Body"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.095, 1.447, 0.01)
 sorting_offset = 5.0
+shaded = true
 texture = ExtResource("9_10dpx")
 
 [node name="Accessory" type="Sprite3D" parent="Sprite/Body"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.12842, 0)
 sorting_offset = 10.0
+shaded = true
 texture = SubResource("AtlasTexture_5n16k")
 
 [node name="Arm1-R" type="Sprite3D" parent="Sprite/Body"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.20526, 1.63241, -0.01)
 sorting_offset = -10.0
 offset = Vector2(-38.475, -43.02)
+shaded = true
 texture = ExtResource("11_5n16k")
 
 [node name="Arm2-R" type="Sprite3D" parent="Sprite/Body/Arm1-R"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.529468, -0.953383, 0.02)
 sorting_offset = 25.0
 offset = Vector2(37.01, -4.98)
+shaded = true
 texture = ExtResource("12_iivqq")
 
 [node name="Hand-R" type="Sprite3D" parent="Sprite/Body/Arm1-R/Arm2-R"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.766283, -0.182343, 0.01)
 sorting_offset = 45.0
 offset = Vector2(14.26, -20.255)
+shaded = true
 texture = ExtResource("13_tqxpv")
 
 [node name="Object-R" type="Sprite3D" parent="Sprite/Body/Arm1-R/Arm2-R/Hand-R"]
 sorting_offset = 15.0
 offset = Vector2(32.505, -112.49)
+shaded = true
 texture = SubResource("AtlasTexture_iivqq")
 
 [node name="Arm1-L" type="Sprite3D" parent="Sprite/Body"]
@@ -187,6 +200,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.12483, 1.63241, -0.01)
 sorting_offset = -10.0
 offset = Vector2(37.665, -43.02)
 flip_h = true
+shaded = true
 texture = ExtResource("11_5n16k")
 
 [node name="Arm2-L" type="Sprite3D" parent="Sprite/Body/Arm1-L"]
@@ -194,6 +208,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.681001, -1.04063, -0.01)
 sorting_offset = 25.0
 offset = Vector2(-43.43, -4.98)
 flip_h = true
+shaded = true
 texture = ExtResource("12_iivqq")
 
 [node name="Hand-L" type="Sprite3D" parent="Sprite/Body/Arm1-L/Arm2-L"]
@@ -201,17 +216,20 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.920674, -0.128895, 0.01)
 sorting_offset = 45.0
 offset = Vector2(-5.14, -20.255)
 flip_h = true
+shaded = true
 texture = ExtResource("13_tqxpv")
 
 [node name="Object-L" type="Sprite3D" parent="Sprite/Body/Arm1-L/Arm2-L/Hand-L"]
 sorting_offset = 15.0
 flip_h = true
+shaded = true
 texture = SubResource("AtlasTexture_tqxpv")
 
 [node name="Leg-R" type="Sprite3D" parent="Sprite/Body"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.689925, -1.58629, 0.01)
 sorting_offset = 10.0
 offset = Vector2(-51.245, -3.81)
+shaded = true
 texture = ExtResource("15_dfj5n")
 
 [node name="Leg-L" type="Sprite3D" parent="Sprite/Body"]
@@ -219,12 +237,14 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.710342, -1.58629, 0.01)
 sorting_offset = 10.0
 offset = Vector2(52.435, -3.81)
 flip_h = true
+shaded = true
 texture = ExtResource("15_dfj5n")
 
 [node name="Tail" type="Sprite3D" parent="Sprite/Body"]
 transform = Transform3D(0.99974, -0.0228181, 0, 0.0228181, 0.99974, 0, 0, 0, 1, -0.0612543, -1.70397, -0.011)
 sorting_offset = -10.0
 offset = Vector2(-286.665, 329.005)
+shaded = true
 texture = ExtResource("16_o2y4v")
 
 [node name="Head_idle" type="AnimationPlayer" parent="Sprite"]
